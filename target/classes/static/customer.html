@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>用户后台系统</title>
+
+		<!-- ================= Favicon ================== -->
+		<!-- Standard -->
+		<link rel="shortcut icon" href="http://placehold.it/64.png/000/fff">
+		<!-- Retina iPad Touch Icon-->
+		<link rel="apple-touch-icon" sizes="144x144" href="http://placehold.it/144.png/000/fff">
+		<!-- Retina iPhone Touch Icon-->
+		<link rel="apple-touch-icon" sizes="114x114" href="http://placehold.it/114.png/000/fff">
+		<!-- Standard iPad Touch Icon-->
+		<link rel="apple-touch-icon" sizes="72x72" href="http://placehold.it/72.png/000/fff">
+		<!-- Standard iPhone Touch Icon-->
+		<link rel="apple-touch-icon" sizes="57x57" href="http://placehold.it/57.png/000/fff">
+
+		<!-- Styles -->
+		<link href="static/assets/fontAwesome/css/fontawesome-all.min.css" rel="stylesheet">
+		<link href="static/assets/css/lib/themify-icons.css" rel="stylesheet">
+		<link href="static/assets/css/lib/mmc-chat.css" rel="stylesheet" />
+		<link href="static/assets/css/lib/sidebar.css" rel="stylesheet">
+		<link href="static/assets/css/lib/bootstrap.min.css" rel="stylesheet">
+		<link href="static/assets/css/lib/nixon.css" rel="stylesheet">
+		<link href="static/assets/css/style.css" rel="stylesheet">
+		<link href="static/assets/starComment-master/dist/css/starComment.css" rel="stylesheet">
+		<link href="static/assets/css/chat.css" rel="stylesheet">
+		<link href="static/assets/css/iconfont.css" rel="stylesheet">
+		<link href="static/assets/css/popupstyle.css" rel="stylesheet">
+		
+	</head>
+
+	<body>
+
+		<div class="sidebar sidebar-shrink">
+			<img id="sideImg" src="static/logo/logo.png" />
+		</div><!-- /# sidebar -->
+
+		<div class="header">
+			<div class="pull-left">
+				<div class="logo">
+					<a href="index.html">
+						<img id="logoImg" src="static/logo/logo.png" data-logo_big="logo/logo.png" data-logo_small="logo/logoSmall.png"
+						 alt="Nixon" />
+					</a>
+				</div>
+				<div class="hamburger sidebar-toggle">
+					<span class="ti-menu"></span>
+				</div>
+			</div>
+
+			<div class="pull-right p-r-15">
+				<ul>
+					<li class="header-icon dib"><i class="ti-bell"></i>
+						<div class="drop-down">
+							<div class="dropdown-content-heading">
+								<span class="text-left">消息</span>
+							</div>
+							<div class="dropdown-content-body">
+								<ul>
+									<li>
+										<a href="#">
+											<img class="pull-left m-r-10 avatar-img" src="static/assets/images/avatar/3.jpg" alt="" />
+											<div class="notification-content">
+												<small class="notification-timestamp pull-right">02:34 PM</small>
+												<div class="notification-heading">Mr. Jane</div>
+												<div class="notification-text">5 members joined today </div>
+											</div>
+										</a>
+									</li>
+
+									
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="header-icon dib"><i class="ti-email"></i>
+						<div class="drop-down">
+							<div class="dropdown-content-heading">
+								<span class="text-left">2 New Messages</span>
+								<a href="app-email.html"><i class="ti-pencil-alt pull-right"></i></a>
+							</div>
+							<div class="dropdown-content-body">
+								<ul>
+									<li class="notification-unread">
+										<a href="#">
+											<img class="pull-left m-r-10 avatar-img" src="static/assets/images/avatar/1.jpg" alt="" />
+											<div class="notification-content">
+												<small class="notification-timestamp pull-right">02:34 PM</small>
+												<div class="notification-heading">Jane Doe</div>
+												<div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+											</div>
+										</a>
+									</li>
+
+									<li class="notification-unread">
+										<a href="#">
+											<img class="pull-left m-r-10 avatar-img" src="static/assets/images/avatar/2.jpg" alt="" />
+											<div class="notification-content">
+												<small class="notification-timestamp pull-right">02:34 PM</small>
+												<div class="notification-heading">Jane Roe</div>
+												<div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+											</div>
+										</a>
+									</li>
+
+									<li>
+										<a href="#">
+											<img class="pull-left m-r-10 avatar-img" src="static/assets/images/avatar/3.jpg" alt="" />
+											<div class="notification-content">
+												<small class="notification-timestamp pull-right">02:34 PM</small>
+												<div class="notification-heading">Jane Doe</div>
+												<div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+											</div>
+										</a>
+									</li>
+
+									<li>
+										<a href="#">
+											<img class="pull-left m-r-10 avatar-img" src="static/assets/images/avatar/2.jpg" alt="" />
+											<div class="notification-content">
+												<small class="notification-timestamp pull-right">02:34 PM</small>
+												<div class="notification-heading">Jane Roe</div>
+												<div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+											</div>
+										</a>
+									</li>
+									<li class="text-center">
+										<a href="#" class="more-link">See All</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="header-icon dib chat-sidebar-icon"><i class="ti-comments"></i></li>
+					<li class="header-icon dib"><img class="avatar-img" src="static/assets/images/avatar/1.jpg" alt="" /> <span class="user-avatar">Jane
+							<i class="ti-angle-down f-s-10"></i></span>
+						<div class="drop-down dropdown-profile">
+							<div class="dropdown-content-heading">
+								<span class="text-left">Upgrade Now</span>
+								<p class="trial-day">30 Days Trail</p>
+							</div>
+							<div class="dropdown-content-body">
+								<ul>
+									<li><a href="#"><i class="ti-user"></i> <span>Profile</span></a></li>
+									<li><a href="#"><i class="ti-wallet"></i> <span>My Balance</span></a></li>
+									<li><a href="#"><i class="ti-write"></i> <span>My Task</span></a></li>
+									<li><a href="#"><i class="ti-calendar"></i> <span>My Calender</span></a></li>
+									<li><a href="#"><i class="ti-email"></i> <span>Inbox</span></a></li>
+									<li><a href="#"><i class="ti-settings"></i> <span>Setting</span></a></li>
+									<li><a href="#"><i class="ti-help-alt"></i> <span>Help</span></a></li>
+									<li><a href="#"><i class="ti-lock"></i> <span>Lock Screen</span></a></li>
+									<li><a href="#"><i class="ti-power-off"></i> <span>Logout</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+
+		<div class="content-wrap">
+			<div class="main">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-lg-8 p-0">
+							<div class="page-header">
+								<div class="page-title">
+									<h1>欢迎您，用户！</h1>
+								</div>
+							</div>
+						</div><!-- /# column -->
+						<div class="col-lg-4 p-0">
+							<div class="page-header">
+
+							</div>
+						</div><!-- /# column -->
+					</div><!-- /# row -->
+					<div class="col-lg-12">
+						<div class="card alert">
+							<div class="card-header">
+								<h3>功能选项</h3>
+							</div>
+							<div class="card-body">
+								<div class="panel-group" id="accordion">
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse1" onclick="getThePersonNow()">个人信息</a></h4>
+										</div>
+										<div id="collapse1" class="panel-collapse collapse">
+											<div class="panel-body">
+												
+													<div style="margin:10px">
+														<div class="form-group">
+															<label>姓名</label>
+															<input type="text" name="employeeName" id="employeeName" lay-verify="required" class="layui-input"
+															 readonly>
+														</div>
+														<div class="form-group">
+															<label>电话</label>
+															<input type="text" name="employeePhonenumber" id="employeePhonenumber" readonly />
+														</div>
+														
+														<button type="imput" class="btn btn-primary btn-flat m-b-5 m-t-5" id="resetClick">修改密码</button><br>
+														<div id="resetdistric" hidden="true">
+															<input type="password" id="resetPass" value="" placeholder="输入重置密码" />
+															<button type="button" onclick="changePass()">确定</button>
+														</div>
+													</div>
+											</div>
+										</div>
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse2" onclick="getAddresses(0)">我的地址簿</a></h4>
+											</div>
+											<div id="collapse2" class="panel-collapse collapse">
+												<div class="panel-body">
+													<div class="row">
+														<div class="col-lg-12">
+															<div class="card alert">
+																<div class="card-header">
+																	<h4>我的地址簿</h4>
+																	<div class="card-header-right-icon">
+																		<ul>
+																			<li class="card-close" data-dismiss="alert"><i class="ti-close"></i></li>
+																			<li class="card-option drop-menu"><i class="ti-settings" data-toggle="dropdown" aria-haspopup="true"
+																				 aria-expanded="true" role="link"></i>
+																				<ul class="card-option-dropdown dropdown-menu">
+																					<li><a href="#"><i class="ti-loop"></i> Update data</a></li>
+																					<li><a href="#"><i class="ti-menu-alt"></i> Detail log</a></li>
+																					<li><a href="#"><i class="ti-pulse"></i> Statistics</a></li>
+																					<li><a href="#"><i class="ti-power-off"></i> Clear ist</a></li>
+																				</ul>
+																			</li>
+
+																		</ul>
+																	</div>
+																</div>
+																<div class="card-body">
+																	<table class="table table-responsive table-striped">
+																		<thead>
+																			<tr>
+																				<th>姓名</th>
+																				<th>电话</th>
+																				<th>区域</th>
+																				<th>详细地址</th>
+																			
+																			</tr>
+																		</thead>
+																		<tbody id="addresses">
+
+																		</tbody>
+																	</table>
+																</div>
+															</div>
+														</div><!-- /# column -->
+													</div><!-- /# row -->
+												</div>
+											</div>
+											<div class="panel panel-default">
+												<div class="panel-heading">
+													<h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse3" onclick="connect()">我要寄件</a></h4>
+												</div>
+												<div id="collapse3" class="panel-collapse collapse">
+													<div class="panel-body">
+														<div style="margin:30px">
+
+															<div class="container">
+															  <a class="btn btn-primary btn-rounded m-b-10 m-l-5" href="#popup" onclick="getAddresses(1)">从地址簿中导入</a>
+															  <div class="popup" id="popup">
+															    <div class="popup-inner">
+																	<div class="panel-body">
+																		<div class="row">
+																		    <div class="col-lg-12">
+																			<div class="card alert">
+																					<div class="card-header">
+																						<h4>我的地址簿</h4>
+																						<div class="card-header-right-icon">
+																							<ul>
+																								<li class="card-close" data-dismiss="alert"><i class="ti-close"></i></li>
+																								<li class="card-option drop-menu"><i class="ti-settings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" role="link"></i>
+																									<ul class="card-option-dropdown dropdown-menu">
+																										<li><a href="#"><i class="ti-loop"></i> Update data</a></li>
+																										<li><a href="#"><i class="ti-menu-alt"></i> Detail log</a></li>
+																										<li><a href="#"><i class="ti-pulse"></i> Statistics</a></li>
+																										<li><a href="#"><i class="ti-power-off"></i> Clear ist</a></li>
+																									</ul>
+																								</li>
+																								 
+																							</ul>
+																						</div>
+																					</div>
+																					<div class="card-body">
+																						<table class="table table-responsive table-striped">
+																							<thead>
+																								<tr>
+																									<th>姓名</th>
+																									<th>电话</th>
+																									<th>区域</th>
+																									<th>详细地址</th>
+																									<th>导入地址填写</th>
+																								</tr>
+																							</thead>
+																							<tbody id="addressToin">
+																							
+																							</tbody>
+																						</table>
+																					</div>
+																				</div>
+																			</div><!-- /# column -->
+																		</div><!-- /# row -->
+																	</div>
+															      <a class="popup__close" href="#">X</a>
+															    </div>
+															  </div>
+															</div>
+															<br />
+
+
+															<label>寄件人姓名：</label><input type="text" id="sendName" /><br>
+															<label>寄件人电话：</label><input type="text" id="sendPhoneNum" /><br>
+															<label>寄件区域：</label><input type="text" id="sendDistrict" /><br>
+															<label>寄件地址：</label><input type="text" id="sendAddress" /><br>
+															<button class="btn btn-default btn-rounded m-b-10" type="button" id="SendAddTo" onclick="addTo(0)"><i
+																 class="ti-plus">&nbsp;</i>添加到地址簿</button>
+															<hr />
+															<label>收件人姓名：</label><input type="text" id="receiveName" /><br>
+															<label>收件人电话：</label><input type="text" id="receivePhoneNum" /><br>
+															<label>收件区域：</label><input type="text" id="receiveDistrict" /><br>
+															<label>收件地址：</label><input type="text" id="receiveAddress" /><br>
+															<button class="btn btn-default btn-rounded m-b-10" type="button" id="SendAddTo2" onclick="addTo(0)"><i
+																 class="ti-plus">&nbsp;</i>添加到地址簿</button>
+															<hr />
+															<div class="card-toggle-body">
+																<div class="btn-group">
+																	<button type="button" class="btn btn-primary" id="query" onclick="queryExpreMan()">查询附近快递员</button>&nbsp;&nbsp;&nbsp;&nbsp;
+																	<div class="select">
+																		<select id="douxing">
+																			<option value="">请先查询</option>
+																		</select>
+																	</div>
+
+
+																</div>
+															</div>
+															<br>
+															<button class="btn btn-primary btn-rounded m-b-10 m-l-5" type="button" id="submit" onclick="send()">提交</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="panel-heading">
+												<h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse4" onclick="getOrder('customer', 0)">待揽收包裹</a></h4>
+											</div>
+											<div id="collapse4" class="panel-collapse collapse">
+												<div class="panel-body">
+													<div class="row">
+														<div class="col-lg-12">
+															<div class="card alert">
+																<div class="card-header">
+																	<h4>待揽收包裹</h4>
+																	<div class="card-header-right-icon">
+																		<ul>
+																			<li class="card-close" data-dismiss="alert"><i class="ti-close"></i></li>
+																			<li class="card-option drop-menu"><i class="ti-settings" data-toggle="dropdown" aria-haspopup="true"
+																				 aria-expanded="true" role="link"></i>
+																				<ul class="card-option-dropdown dropdown-menu">
+																					<li><a href="#"><i class="ti-loop"></i> Update data</a></li>
+																					<li><a href="#"><i class="ti-menu-alt"></i> Detail log</a></li>
+																					<li><a href="#"><i class="ti-pulse"></i> Statistics</a></li>
+																					<li><a href="#"><i class="ti-power-off"></i> Clear ist</a></li>
+																				</ul>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+																<hr />
+																<div class="card-body">
+																	<table class="table table-responsive table-striped">
+																		<thead>
+																			<tr>
+																				<th>快递员姓名及电话</th>
+																				<th>交谈</th>
+																				<th>收件地址</th>
+																			</tr>
+																		</thead>
+																		<tbody id="orderhadsend">
+																		
+																		</tbody>
+																	</table>
+																</div>
+															</div>
+														</div><!-- /# column -->
+													</div><!-- /# row -->
+												</div>
+											</div>
+											<div class="panel panel-default">
+												<div class="panel-heading">
+													<h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse5" onclick="toReceive(3)">待收件管理</a></h4>
+												</div>
+												<div id="collapse5" class="panel-collapse collapse">
+													<div class="panel-body">
+														<div class="row">
+															<div class="col-lg-12">
+																<div class="card alert">
+																	<div class="card-header">
+																		<h4>待收件管理</h4>
+																		<div class="card-header-right-icon">
+																			<ul>
+																				<li class="card-close" data-dismiss="alert"><i class="ti-close"></i></li>
+																				<li class="card-option drop-menu"><i class="ti-settings" data-toggle="dropdown" aria-haspopup="true"
+																					 aria-expanded="true" role="link"></i>
+																					<ul class="card-option-dropdown dropdown-menu">
+																						<li><a href="#"><i class="ti-loop"></i> Update data</a></li>
+																						<li><a href="#"><i class="ti-menu-alt"></i> Detail log</a></li>
+																						<li><a href="#"><i class="ti-pulse"></i> Statistics</a></li>
+																						<li><a href="#"><i class="ti-power-off"></i> Clear ist</a></li>
+																					</ul>
+																				</li>
+
+																			</ul>
+																		</div>
+																	</div>
+																	<hr />
+																	
+																	<div class="card-body">
+																		<table class="table table-responsive table-striped">
+																			<thead>
+																				<tr>
+																					<th>寄件人姓名</th>
+																					<th>寄件地址</th>
+																					<th>订单编号</th>
+																					<th>查看详情</th>
+																				</tr>
+																			</thead>
+																			<tbody id="getToReceive">
+																				
+																			</tbody>
+																		</table>
+																	</div>
+																</div>
+															</div><!-- /# column -->
+														</div><!-- /# row -->
+													</div>
+												</div>
+											</div>
+											<div class="panel-heading">
+												<h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse6" onclick="toReceive(4)">已签收管理</a></h4>
+											</div>
+											<div id="collapse6" class="panel-collapse collapse">
+												<div class="panel-body">
+													<div class="row">
+														<div class="col-lg-12">
+															<div class="card alert">
+																<div class="card-header">
+																	<h4>已收件管理</h4>
+																	<div class="card-header-right-icon">
+																		<ul>
+																			<li class="card-close" data-dismiss="alert"><i class="ti-close"></i></li>
+																			<li class="card-option drop-menu"><i class="ti-settings" data-toggle="dropdown" aria-haspopup="true"
+																				 aria-expanded="true" role="link"></i>
+																				<ul class="card-option-dropdown dropdown-menu">
+																					<li><a href="#"><i class="ti-loop"></i> Update data</a></li>
+																					<li><a href="#"><i class="ti-menu-alt"></i> Detail log</a></li>
+																					<li><a href="#"><i class="ti-pulse"></i> Statistics</a></li>
+																					<li><a href="#"><i class="ti-power-off"></i> Clear ist</a></li>
+																				</ul>
+																			</li>
+
+																		</ul>
+																	</div>
+																</div>
+																<hr />
+															
+																<div class="card-body">
+																	<table class="table table-responsive table-striped">
+																		<thead>
+																			<tr>
+																				<th>快递员姓名</th>
+																				<th>快递员电话</th>
+																				<th>订单编号</th>
+																				<th>签收时间</th>
+																				<th>评价快递员</th>
+																			</tr>
+																		</thead>
+																		<tbody id="hadReceive">
+													
+																		</tbody>
+																	</table>
+																</div>
+															</div>
+														</div><!-- /# column -->
+													</div><!-- /# row -->
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- /# card -->
+							</div>
+							<div class="chatBox" ref="chatBox" hidden="false">
+							    <div class="chatBox-head">
+							        <div class="chatBox-head-two">
+							            <div class="chat-return">返回</div>
+							            <div class="chat-people">
+							                <div class="ChatInfoHead">
+							                    <img src="img/1.png" alt="头像"/>
+							                </div>
+							                <div class="ChatInfoName">这是用户的名字，看看名字到底能有多长</div>
+							            </div>
+							            <div class="chat-close">关闭</div>
+							        </div>
+							    </div>
+							    <div class="chatBox-info">
+							        <div class="chatBox-kuang" ref="chatBoxkuang">
+							            <div class="chatBox-content">
+							                <div class="chatBox-content-demo" id="chatBox-content-demo">
+							
+							                    <div class="clearfloat">
+							                        <div class="author-name">
+							                            <small class="chat-date">2017-12-02 14:26:58</small>
+							                        </div>
+							                        <div class="left">
+							                            <div class="chat-avatars"><img src="img/icon01.png" alt="头像"/></div>
+							                            <div class="chat-message">
+							                                给你看张图
+							                            </div>
+							                        </div>
+							                    </div>
+							
+							                    <div class="clearfloat">
+							                        <div class="author-name">
+							                            <small class="chat-date">2017-12-02 14:26:58</small>
+							                        </div>
+							                        <div class="left">
+							                            <div class="chat-avatars"><img src="img/icon01.png" alt="头像"/></div>
+							                            <div class="chat-message">
+							                                <img src="img/1.png" alt="">
+							                            </div>
+							                        </div>
+							                    </div>
+							
+							                    <div class="clearfloat">
+							                        <div class="author-name">
+							                            <small class="chat-date">2017-12-02 14:26:58</small>
+							                        </div>
+							                        <div class="right">
+							                            <div class="chat-message">嗯，适合做壁纸</div>
+							                            <div class="chat-avatars"><img src="img/icon02.png" alt="头像"/></div>
+							                        </div>
+							                    </div>
+							
+							                </div>
+							            </div>
+							            <div class="chatBox-send">
+							                <div class="div-textarea" contenteditable="true"></div>
+							                <div>
+							                    <button id="chat-biaoqing" class="btn-default-styles">
+							                        <i class="iconfont icon-biaoqing"></i>
+							                    </button>
+							                    <label id="chat-tuxiang" title="发送图片" for="inputImage" class="btn-default-styles">
+							                        <input type="file" onchange="selectImg(this)" accept="image/jpg,image/jpeg,image/png"
+							                               name="file" id="inputImage" class="hidden">
+							                        <i class="iconfont icon-tuxiang"></i>
+							                    </label>
+							                    <button id="chat-fasong" class="btn-default-styles"><i class="iconfont icon-fasong"></i>
+							                    </button>
+							                </div>
+							                <div class="biaoqing-photo">
+							                    <ul>
+							                        <li><span class="emoji-picker-image" style="background-position: -9px -18px;"></span></li>
+							                        <li><span class="emoji-picker-image" style="background-position: -40px -18px;"></span></li>
+							                        <li><span class="emoji-picker-image" style="background-position: -71px -18px;"></span></li>
+							                        <li><span class="emoji-picker-image" style="background-position: -102px -18px;"></span></li>
+							                        <li><span class="emoji-picker-image" style="background-position: -133px -18px;"></span></li>
+							                        <li><span class="emoji-picker-image" style="background-position: -164px -18px;"></span></li>
+							                        <li><span class="emoji-picker-image" style="background-position: -9px -52px;"></span></li>
+							                        <li><span class="emoji-picker-image" style="background-position: -40px -52px;"></span></li>
+							                        <li><span class="emoji-picker-image" style="background-position: -71px -52px;"></span></li>
+							                        <li><span class="emoji-picker-image" style="background-position: -102px -52px;"></span></li>
+							                        <li><span class="emoji-picker-image" style="background-position: -133px -52px;"></span></li>
+							                        <li><span class="emoji-picker-image" style="background-position: -164px -52px;"></span></li>
+							                        <li><span class="emoji-picker-image" style="background-position: -9px -86px;"></span></li>
+							                        <li><span class="emoji-picker-image" style="background-position: -40px -86px;"></span></li>
+							                        <li><span class="emoji-picker-image" style="background-position: -71px -86px;"></span></li>
+							                        <li><span class="emoji-picker-image" style="background-position: -102px -86px;"></span></li>
+							                        <li><span class="emoji-picker-image" style="background-position: -133px -86px;"></span></li>
+							                        <li><span class="emoji-picker-image" style="background-position: -164px -86px;"></span></li>
+							                        <li><span class="emoji-picker-image" style="background-position: -9px -120px;"></span></li>
+							                        <li><span class="emoji-picker-image" style="background-position: -40px -120px;"></span></li>
+							                        <li><span class="emoji-picker-image" style="background-position: -71px -120px;"></span></li>
+							                        <li><span class="emoji-picker-image" style="background-position: -102px -120px;"></span>
+							                        </li>
+							                        <li><span class="emoji-picker-image" style="background-position: -133px -120px;"></span>
+							                        </li>
+							                        <li><span class="emoji-picker-image" style="background-position: -164px -120px;"></span>
+							                        </li>
+							                        <li><span class="emoji-picker-image" style="background-position: -9px -154px;"></span></li>
+							                        <li><span class="emoji-picker-image" style="background-position: -40px -154px;"></span></li>
+							                        <li><span class="emoji-picker-image" style="background-position: -71px -154px;"></span></li>
+							                        <li><span class="emoji-picker-image" style="background-position: -102px -154px;"></span>
+							                        </li>
+							                        <li><span class="emoji-picker-image" style="background-position: -133px -154px;"></span>
+							                        </li>
+							                        <li><span class="emoji-picker-image" style="background-position: -164px -154px;"></span>
+							                        </li>
+							                    </ul>
+							                </div>
+							            </div>
+							        </div>
+							    </div>
+							</div>
+							<!-- /# main content -->
+							<p>Copyright &copy; 2019.Company name All rights reserved.</p>
+						</div><!-- /# container-fluid -->
+					</div><!-- /# main -->
+				</div><!-- /# content wrap -->
+			</div>
+		</div>
+		
+
+		<script src="static/js/main/stomp.min.js"></script>
+		<script src="static/js/main/sockjs.min.js"></script>
+		<!-- <script src="static/js/main/jquery.min.js"></script> -->
+		<script src="static/js/main/Order.js" type="text/javascript" charset="utf-8"></script>
+		
+		
+		<script src="static/assets/js/lib/jquery.min.js"></script><!-- jquery vendor -->
+		<script src="static/assets/js/lib/jquery.nanoscroller.min.js"></script><!-- nano scroller -->
+		<script src="static/assets/js/lib/sidebar.js"></script><!-- sidebar -->
+		<script src="static/assets/js/lib/bootstrap.min.js"></script><!-- bootstrap -->
+		<!-- <script src="static/assets/starComment-master/dist/vendor/jquery/jquery.min.js"></script> -->
+		<script src="static/assets/starComment-master/dist/vendor/seajs/sea.js"></script>
+		<script src="static/assets/starComment-master/dist/js/starComment.js"></script>
+
+		<!-- <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script> -->
+		
+		
+		<script type="text/javascript">
+			seajs.use('static/main', function(main) {
+				main.init();
+				main.register();
+			});
+		</script>
+		<script>
+			
+			function keypress2() {
+				var text1 = document.getElementById("PingLun").value;
+				var maxLen = 100;
+				var len; //记录剩余字符串的长度
+				if (text1.length >= maxLen) {
+					document.getElementById("PingLun").value = text1.substr(0, maxLen); //只显示起始位-末尾；substr（起始位，末尾)
+					len = 0;
+				} else {
+					len = maxLen - text1.length;
+				}
+				document.getElementById("pinglun").innerText = len;
+			}
+			$("#resetClick").click(function() {
+				$("#resetdistric").prop("hidden", false);
+			});
+		</script>
+	</body>
+
+</html>

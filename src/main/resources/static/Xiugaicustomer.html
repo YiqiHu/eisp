@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>用户后台系统</title>
+	
+	<!-- ================= Favicon ================== -->
+    <!-- Standard -->
+    <link rel="shortcut icon" href="http://placehold.it/64.png/000/fff">
+    <!-- Retina iPad Touch Icon-->
+    <link rel="apple-touch-icon" sizes="144x144" href="http://placehold.it/144.png/000/fff">
+    <!-- Retina iPhone Touch Icon-->
+    <link rel="apple-touch-icon" sizes="114x114" href="http://placehold.it/114.png/000/fff">
+    <!-- Standard iPad Touch Icon--> 
+    <link rel="apple-touch-icon" sizes="72x72" href="http://placehold.it/72.png/000/fff">
+    <!-- Standard iPhone Touch Icon--> 
+    <link rel="apple-touch-icon" sizes="57x57" href="http://placehold.it/57.png/000/fff">
+	
+	<!-- Styles -->
+    <link href="assets/fontAwesome/css/fontawesome-all.min.css" rel="stylesheet">
+    <link href="assets/css/lib/themify-icons.css" rel="stylesheet">
+    <link href="assets/css/lib/mmc-chat.css" rel="stylesheet" />
+    <link href="assets/css/lib/sidebar.css" rel="stylesheet">
+    <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/lib/nixon.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+	<link href="assets/css/popupstyle.css" rel="stylesheet">
+	<link href="assets/starComment-master/dist/css/starComment.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="iconfont.css">
+	<link rel="stylesheet" type="text/css" href="chat.css">
+	<script src="assets/starComment-master/dist/vendor/jquery/jquery.min.js"></script>
+	<script src="assets/starComment-master/dist/vendor/seajs/sea.js"></script>
+	<script src="assets/starComment-master/dist/js/starComment.js"></script>
+</head>
+
+<body>
+
+    <div class="sidebar sidebar-shrink">
+                    <img id="sideImg" src="logo/logo.png" />
+    </div><!-- /# sidebar -->
+
+    <div class="header">
+        <div class="pull-left">
+                        <div class="logo">
+                <a href="index.html">
+                    <img id="logoImg" 
+                    src="logo/logo.png" 
+                    data-logo_big="logo/logo.png"
+                    data-logo_small="logo/logoSmall.png"
+                    alt="Nixon" />
+                </a>
+            </div>
+            <div class="hamburger sidebar-toggle">
+                <span class="ti-menu"></span>
+            </div>
+        </div>
+
+        <div class="pull-right p-r-15">
+            <ul>
+                <li class="header-icon dib"><i class="ti-bell"></i>
+                    <div class="drop-down">
+                        <div class="dropdown-content-heading">
+                            <span class="text-left">Recent Notifications</span>
+                        </div>
+                        <div class="dropdown-content-body">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/3.jpg" alt="" />
+                                        <div class="notification-content">
+                                            <small class="notification-timestamp pull-right">02:34 PM</small>
+                                            <div class="notification-heading">Mr. Jane</div>
+                                            <div class="notification-text">5 members joined today </div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/3.jpg" alt="" />
+                                        <div class="notification-content">
+                                            <small class="notification-timestamp pull-right">02:34 PM</small>
+                                            <div class="notification-heading">Mariam</div>
+                                            <div class="notification-text">likes a photo of you</div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/3.jpg" alt="" />
+                                        <div class="notification-content">
+                                            <small class="notification-timestamp pull-right">02:34 PM</small>
+                                            <div class="notification-heading">Tasnim</div>
+                                            <div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/3.jpg" alt="" />
+                                        <div class="notification-content">
+                                            <small class="notification-timestamp pull-right">02:34 PM</small>
+                                            <div class="notification-heading">Jane Roe</div>
+                                            <div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="text-center">
+                                    <a href="#" class="more-link">See All</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="header-icon dib"><i class="ti-email"></i>
+                    <div class="drop-down">
+                        <div class="dropdown-content-heading">
+                            <span class="text-left">2 New Messages</span>
+                            <a href="app-email.html"><i class="ti-pencil-alt pull-right"></i></a>
+                        </div>
+                        <div class="dropdown-content-body">
+                            <ul>
+                                <li class="notification-unread">
+                                    <a href="#">
+                                        <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/1.jpg" alt="" />
+                                        <div class="notification-content">
+                                            <small class="notification-timestamp pull-right">02:34 PM</small>
+                                            <div class="notification-heading">Jane Doe</div>
+                                            <div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li class="notification-unread">
+                                    <a href="#">
+                                        <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/2.jpg" alt="" />
+                                        <div class="notification-content">
+                                            <small class="notification-timestamp pull-right">02:34 PM</small>
+                                            <div class="notification-heading">Jane Roe</div>
+                                            <div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/3.jpg" alt="" />
+                                        <div class="notification-content">
+                                            <small class="notification-timestamp pull-right">02:34 PM</small>
+                                            <div class="notification-heading">Jane Doe</div>
+                                            <div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/2.jpg" alt="" />
+                                        <div class="notification-content">
+                                            <small class="notification-timestamp pull-right">02:34 PM</small>
+                                            <div class="notification-heading">Jane Roe</div>
+                                            <div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="text-center">
+                                    <a href="#" class="more-link">See All</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+				<li class="header-icon dib chat-sidebar-icon"><i class="ti-comments"></i></li>
+                <li class="header-icon dib"><img class="avatar-img" src="assets/images/avatar/1.jpg" alt="" /> <span class="user-avatar">Jane <i class="ti-angle-down f-s-10"></i></span>
+                    <div class="drop-down dropdown-profile">
+                        <div class="dropdown-content-heading">
+                            <span class="text-left">Upgrade Now</span>
+                            <p class="trial-day">30 Days Trail</p>
+                        </div>
+                        <div class="dropdown-content-body">
+                            <ul>
+                                <li><a href="#"><i class="ti-user"></i> <span>Profile</span></a></li>
+                                <li><a href="#"><i class="ti-wallet"></i> <span>My Balance</span></a></li>
+                                <li><a href="#"><i class="ti-write"></i> <span>My Task</span></a></li>
+                                <li><a href="#"><i class="ti-calendar"></i> <span>My Calender</span></a></li>
+                                <li><a href="#"><i class="ti-email"></i> <span>Inbox</span></a></li>
+                                <li><a href="#"><i class="ti-settings"></i> <span>Setting</span></a></li>
+                                <li><a href="#"><i class="ti-help-alt"></i> <span>Help</span></a></li>
+                                <li><a href="#"><i class="ti-lock"></i> <span>Lock Screen</span></a></li>
+                                <li><a href="#"><i class="ti-power-off"></i> <span>Logout</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+  
+    <div class="content-wrap">
+        <div class="main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-8 p-0">
+                        <div class="page-header">
+                            <div class="page-title">
+                                <h1>欢迎您，用户！</h1>
+                            </div>
+                        </div>
+                    </div><!-- /# column -->
+                    <div class="col-lg-4 p-0">
+                        <div class="page-header">
+							
+                        </div>
+                    </div><!-- /# column -->
+                </div><!-- /# row -->
+				<div class="col-lg-12">
+				    <div class="card alert">
+				        <div class="card-header">
+				            <h3>功能选项</h3>
+				        </div>
+				        <div class="card-body">
+				            <div class="panel-group" id="accordion">
+				                <div class="panel panel-default">
+				                <div class="panel-heading">
+								<h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse1">个人信息</a></h4>
+								</div>
+								<div id="collapse1" class="panel-collapse collapse in">
+									<div class="panel-body">
+									<div style="margin:30px">
+										<form action="#" >
+											<div class="form-group">
+												<label>姓名</label><br>
+													<input type="text" name="employeeName" id="employeeName" lay-verify="required" class="layui-input" readonly>
+											</div>
+											<div class="form-group">
+												<label>电话</label><br>
+													<input type="text" name="employeePhonenumber" id="employeePhonenumber" readonly>
+											</div>
+											<div class="form-group">
+												<label>公司</label><br>
+													<input type="text" name="employeeCompany" id="employeeCompany" readonly>
+											</div>
+											<div class="form-group">
+												<label>负责区域</label><br>
+													<input type="text" name="employeeRegion" id="employeeRegion" readonly>
+											</div>
+											<button type="imput" class="btn btn-primary btn-flat m-b-30 m-t-30">修改密码</button>
+										</form>
+									</div>
+									</div>
+								</div>
+				                <div class="panel panel-default">
+				                    <div class="panel-heading">
+										<h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse2">我的地址簿</a></h4>
+									</div>
+				                    <div id="collapse2" class="panel-collapse collapse">
+				                        <div class="panel-body">
+											<div class="row">
+											    <div class="col-lg-12">
+												<div class="card alert">
+														<div class="card-header">
+															<h4>我的地址簿</h4>
+															<div class="card-header-right-icon">
+																<ul>
+																	<li class="card-close" data-dismiss="alert"><i class="ti-close"></i></li>
+																	<li class="card-option drop-menu"><i class="ti-settings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" role="link"></i>
+																		<ul class="card-option-dropdown dropdown-menu">
+																			<li><a href="#"><i class="ti-loop"></i> Update data</a></li>
+																			<li><a href="#"><i class="ti-menu-alt"></i> Detail log</a></li>
+																			<li><a href="#"><i class="ti-pulse"></i> Statistics</a></li>
+																			<li><a href="#"><i class="ti-power-off"></i> Clear ist</a></li>
+																		</ul>
+																	</li>
+																	 
+																</ul>
+															</div>
+														</div>
+														<div class="card-body">
+															<table class="table table-responsive table-striped">
+																<thead>
+																	<tr>
+																		<th>#</th>
+																		<th>姓名</th>
+																		<th>电话</th>
+																		<th>区域</th>
+																		<th>详细地址</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr>
+																		<th scope="row">1</th>
+																		<td>小刘</td>
+																		<td>13081862345</td>
+																		<td class="color-primary">河北省秦皇岛市海港区</td>
+																		<td>blablabla</td>
+																	</tr>
+																	<tr>
+																		<th scope="row">2</th>
+																		<td>小陈</td>
+																		<td>13081863456</td>
+																		<td class="color-success">河北省秦皇岛市北戴河区</td>
+																		<td>blablabla</td>
+																	</tr>
+																	<tr>
+																		<th scope="row">3</th>
+																		<td>小王</td>
+																		<td>13081864567</td>
+																		<td class="color-danger">河北省秦皇岛市山海关区</td>
+																		<td>blablabla</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</div><!-- /# column -->
+											</div><!-- /# row -->
+										</div>
+				                </div>
+				                <div class="panel panel-default">
+				                    <div class="panel-heading">
+				                        <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse3">我要寄件</a></h4>
+				                    </div>
+				                    <div id="collapse3" class="panel-collapse collapse">
+				                        <div class="panel-body">
+											<div style="margin:30px">
+												<div class="container">
+												  <a class="btn btn-primary btn-rounded m-b-10 m-l-5" href="#popup">从地址簿中导入</a>
+												  <div class="popup" id="popup">
+												    <div class="popup-inner">
+														<div class="panel-body">
+															<div class="row">
+															    <div class="col-lg-12">
+																<div class="card alert">
+																		<div class="card-header">
+																			<h4>我的地址簿</h4>
+																			<div class="card-header-right-icon">
+																				<ul>
+																					<li class="card-close" data-dismiss="alert"><i class="ti-close"></i></li>
+																					<li class="card-option drop-menu"><i class="ti-settings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" role="link"></i>
+																						<ul class="card-option-dropdown dropdown-menu">
+																							<li><a href="#"><i class="ti-loop"></i> Update data</a></li>
+																							<li><a href="#"><i class="ti-menu-alt"></i> Detail log</a></li>
+																							<li><a href="#"><i class="ti-pulse"></i> Statistics</a></li>
+																							<li><a href="#"><i class="ti-power-off"></i> Clear ist</a></li>
+																						</ul>
+																					</li>
+																					 
+																				</ul>
+																			</div>
+																		</div>
+																		<div class="card-body">
+																			<table class="table table-responsive table-striped">
+																				<thead>
+																					<tr>
+																						<th>#</th>
+																						<th>姓名</th>
+																						<th>电话</th>
+																						<th>区域</th>
+																						<th>详细地址</th>
+																					</tr>
+																				</thead>
+																				<tbody>
+																					<tr>
+																						<th scope="row">1</th>
+																						<td>小刘</td>
+																						<td>13081862345</td>
+																						<td class="color-primary">河北省秦皇岛市海港区</td>
+																						<td>blablabla</td>
+																					</tr>
+																					<tr>
+																						<th scope="row">2</th>
+																						<td>小陈</td>
+																						<td>13081863456</td>
+																						<td class="color-success">河北省秦皇岛市北戴河区</td>
+																						<td>blablabla</td>
+																					</tr>
+																					<tr>
+																						<th scope="row">3</th>
+																						<td>小王</td>
+																						<td>13081864567</td>
+																						<td class="color-danger">河北省秦皇岛市山海关区</td>
+																						<td>blablabla</td>
+																					</tr>
+																				</tbody>
+																			</table>
+																		</div>
+																	</div>
+																</div><!-- /# column -->
+															</div><!-- /# row -->
+														</div>
+												      <a class="popup__close" href="#">X</a>
+												    </div>
+												  </div>
+												</div>
+												<br />
+												<label>寄件人姓名：</label><input type="text" id="sendName" /><br>
+												<label>寄件人电话：</label><input type="text" id="sendPhoneNum" /><br>
+												<label>寄件区域：</label><input type="text" id="sendDistrict" /><br>
+												<label>寄件地址：</label><input type="text" id="sendAddress" /><br>
+												<button class="btn btn-default btn-rounded m-b-10" type="button" id="SendAddTo" onclick="addTo(0)"><i class="ti-plus">&nbsp;</i>添加到地址簿</button>
+												<hr />
+												<label>收件人姓名：</label><input type="text" id="receiveName" /><br>
+												<label>收件人电话：</label><input type="text" id="receivePhoneNum" /><br>
+												<label>收件区域：</label><input type="text" id="receiveDistrict" /><br>
+												<label>收件地址：</label><input type="text" id="receiveAddress" /><br>
+												<button class="btn btn-default btn-rounded m-b-10" type="button" id="SendAddTo2" onclick="addTo(0)"><i class="ti-plus">&nbsp;</i>添加到地址簿</button>
+												<hr />
+												
+												<div class="card-toggle-body">
+													<div class="btn-group">
+													  <button type="button" class="btn btn-primary">查询附近快递员</button>&nbsp;&nbsp;&nbsp;&nbsp;
+														<div class="select">
+														<select>
+															<option value ="1">请选择...</option>
+															<option value ="1">请选择...</option>
+														</select>
+														</div>
+													 <!-- <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+														<span class="ca.;ret"></span>
+													  </button>
+													  <ul class="dropdown-menu">
+														<li><a href="#">小刘&nbsp;&nbsp;&nbsp;&nbsp;4.8分</a></li>
+														<li><a href="#">小肖&nbsp;&nbsp;&nbsp;&nbsp;4.9分</a></li>
+													  </ul> -->
+													</div>
+												</div>
+												<select id="ExpressMans" hidden="true">
+												</select>
+												<br>
+												<button class="btn btn-primary btn-rounded m-b-10 m-l-5" type="button" id="submit" onclick="send()">提交</button>
+											</div>
+										</div>
+				                    </div>
+				                </div>
+								    <div class="panel-heading">
+								        <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse4">已寄出的</a></h4>
+								    </div>
+								    <div id="collapse4" class="panel-collapse collapse">
+								        <div class="panel-body">
+											<div class="row">
+											    <div class="col-lg-12">
+												<div class="card alert">
+														<div class="card-header">
+															<h4>已寄出的</h4>
+															<div class="card-header-right-icon">
+																<ul>
+																	<li class="card-close" data-dismiss="alert"><i class="ti-close"></i></li>
+																	<li class="card-option drop-menu"><i class="ti-settings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" role="link"></i>
+																		<ul class="card-option-dropdown dropdown-menu">
+																			<li><a href="#"><i class="ti-loop"></i> Update data</a></li>
+																			<li><a href="#"><i class="ti-menu-alt"></i> Detail log</a></li>
+																			<li><a href="#"><i class="ti-pulse"></i> Statistics</a></li>
+																			<li><a href="#"><i class="ti-power-off"></i> Clear ist</a></li>
+																		</ul>
+																	</li>
+																	 
+																</ul>
+															</div>
+														</div>
+														<hr />
+														<div class="input-group input-group-default">
+														    <span class="input-group-btn"><button class="btn btn-primary" type="submit"><i class="ti-search"></i></button></span>
+														    <input type="text" placeholder="请输入订单号进行搜索..." name="Search" class="form-control">
+														</div>
+														<div class="card-body">
+															<table class="table table-responsive table-striped">
+																<thead>
+																	<tr>
+																		<th>#</th>
+																		<th>快递员姓名</th>
+																		<th>交谈</th>
+																		<th>快递员电话</th>
+																		<th>寄件地址</th>
+																		<th>收件地址</th>
+																		<th>订单编号</th>
+																		<th>价格</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr>
+																		<th scope="row">1</th>
+																		<td>小刘</td>
+																		<td><button type="button" class="badge badge-primary">联系TA</button></td>
+																		<td class="color-primary">13081862345</td>
+																		<td>河北省秦皇岛市海港区</td>
+																		<td>北京市东城区</td>
+																		<td>1308186234567890</td>
+																		<td>12</td>
+																	</tr>
+																	<tr>
+																		<th scope="row">2</th>
+																		<td>小陈</td>
+																		<td><button type="button" class="badge badge-success">联系TA</button></td>
+																		<td class="color-success">13081863456</td>
+																		<td>河北省秦皇岛市北戴河区</td>
+																		<td>天津市滨海新区</td>
+																		<td>1308186345678901</td>
+																		<td>10</td>
+																	</tr>
+																	<tr>
+																		<th scope="row">3</th>
+																		<td>小王</td>
+																		<td><button type="button" class="badge badge-danger">联系TA</button></td>
+																		<td class="color-danger">13081864567</td>
+																		<td>河北省秦皇岛市山海关区</td>
+																		<td>上海市浦东新区</td>
+																		<td>1308186456789012</td>
+																		<td>20</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</div><!-- /# column -->
+											</div><!-- /# row -->
+										</div>
+								    </div>
+									<div class="panel panel-default">
+									<div class="panel-heading">
+									    <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse5">待收件管理</a></h4>
+									</div>
+									<div id="collapse5" class="panel-collapse collapse">
+									    <div class="panel-body">
+											<div class="row">
+											    <div class="col-lg-12">
+												<div class="card alert">
+														<div class="card-header">
+															<h4>待收件管理</h4>
+															<div class="card-header-right-icon">
+																<ul>
+																	<li class="card-close" data-dismiss="alert"><i class="ti-close"></i></li>
+																	<li class="card-option drop-menu"><i class="ti-settings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" role="link"></i>
+																		<ul class="card-option-dropdown dropdown-menu">
+																			<li><a href="#"><i class="ti-loop"></i> Update data</a></li>
+																			<li><a href="#"><i class="ti-menu-alt"></i> Detail log</a></li>
+																			<li><a href="#"><i class="ti-pulse"></i> Statistics</a></li>
+																			<li><a href="#"><i class="ti-power-off"></i> Clear ist</a></li>
+																		</ul>
+																	</li>
+																	 
+																</ul>
+															</div>
+														</div>
+														<hr />
+														<div class="input-group input-group-default">
+														    <span class="input-group-btn"><button class="btn btn-primary" type="submit"><i class="ti-search"></i></button></span>
+														    <input type="text" placeholder="请输入订单号进行搜索..." name="Search" class="form-control">
+														</div>
+														<div class="card-body">
+															<table class="table table-responsive table-striped">
+																<thead>
+																	<tr>
+																		<th>#</th>
+																		<th>快递员姓名</th>
+																		<th>交谈</th>
+																		<th>快递员电话</th>
+																		<th>订单编号</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr>
+																		<th scope="row">1</th>
+																		<td>小刘</td>
+																		<td><button type="button" class="badge badge-primary">联系TA</button></td>
+																		<td class="color-primary">13081862345</td>
+																		<td>1308186234567890</td>
+																	</tr>
+																	<tr>
+																		<th scope="row">2</th>
+																		<td>小陈</td>
+																		<td><button type="button" class="badge badge-success">联系TA</button></td>
+																		<td class="color-success">13081863456</td>
+																		<td>1308186345678901</td>
+																	</tr>
+																	<tr>
+																		<th scope="row">3</th>
+																		<td>小王</td>
+																		<td><button type="button" class="badge badge-danger">联系TA</button></td>
+																		<td class="color-danger">13081864567</td>
+																		<td>1308186456789012</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</div><!-- /# column -->
+											</div><!-- /# row -->
+										</div>
+										</div>
+									</div>
+									<div class="panel-heading">
+									    <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse6">已收件管理</a></h4>
+									</div>
+									<div id="collapse6" class="panel-collapse collapse">
+									    <div class="panel-body">
+											<div class="row">
+											    <div class="col-lg-12">
+												<div class="card alert">
+														<div class="card-header">
+															<h4>已收件管理</h4>
+															<div class="card-header-right-icon">
+																<ul>
+																	<li class="card-close" data-dismiss="alert"><i class="ti-close"></i></li>
+																	<li class="card-option drop-menu"><i class="ti-settings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" role="link"></i>
+																		<ul class="card-option-dropdown dropdown-menu">
+																			<li><a href="#"><i class="ti-loop"></i> Update data</a></li>
+																			<li><a href="#"><i class="ti-menu-alt"></i> Detail log</a></li>
+																			<li><a href="#"><i class="ti-pulse"></i> Statistics</a></li>
+																			<li><a href="#"><i class="ti-power-off"></i> Clear ist</a></li>
+																		</ul>
+																	</li>
+																	 
+																</ul>
+															</div>
+														</div>
+														<hr />
+														<div class="input-group input-group-default">
+														    <span class="input-group-btn"><button class="btn btn-primary" type="submit"><i class="ti-search"></i></button></span>
+														    <input type="text" placeholder="请输入订单号进行搜索..." name="Search" class="form-control">
+														</div>
+														<div class="card-body">
+															<table class="table table-responsive table-striped">
+																<thead>
+																	<tr>
+																		<th>#</th>
+																		<th>快递员姓名</th>
+																		<th>交谈</th>
+																		<th>快递员电话</th>
+																		<th>订单编号</th>
+																		<th>评价快递员</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr>
+																		<th scope="row">1</th>
+																		<td>小刘</td>
+																		<td><button type="button" class="badge badge-primary">联系TA</button></td>
+																		<td class="color-primary">13081862345</td>
+																		<td>1308186234567890</td>
+																		<td>
+																			<div>
+																				<span class="pStars2">
+																				<span class="star1" v="1" k="1" t="0"></span>
+																				<span class="star2" v="2" k="2" t="0"></span>
+																				<span class="star3" v="3" k="3" t="0"></span>
+																				<span class="star4" v="4" k="4" t="0"></span>
+																				<span class="star5" v="5" k="5" t="0"></span>
+																			    </span>
+																			</div>
+																		</td>
+																	</tr>
+																	<tr>
+																		<th scope="row">2</th>
+																		<td>小陈</td>
+																		<td><button type="button" class="badge badge-success">联系TA</button></td>
+																		<td class="color-success">13081863456</td>
+																		<td>1308186345678901</td>
+																		<td>
+																			<div>
+																				<span class="pStars2">
+																				<span class="star1" v="1" k="1" t="0"></span>
+																				<span class="star2" v="2" k="2" t="0"></span>
+																				<span class="star3" v="3" k="3" t="0"></span>
+																				<span class="star4" v="4" k="4" t="0"></span>
+																				<span class="star5" v="5" k="5" t="0"></span>
+																			    </span>
+																			</div>
+																		</td>
+																	</tr>
+																	<tr>
+																		<th scope="row">3</th>
+																		<td>小王</td>
+																		<td><button type="button" class="badge badge-danger">联系TA</button></td>
+																		<td class="color-danger">13081864567</td>
+																		<td>1308186456789012</td>
+																		<td>
+																			<div>
+																				<span class="pStars2">
+																				<span class="star1" v="1" k="1" t="0"></span>
+																				<span class="star2" v="2" k="2" t="0"></span>
+																				<span class="star3" v="3" k="3" t="0"></span>
+																				<span class="star4" v="4" k="4" t="0"></span>
+																				<span class="star5" v="5" k="5" t="0"></span>
+																			    </span>
+																			</div>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</div><!-- /# column -->
+											</div><!-- /# row -->
+										</div>
+									</div>
+								</div>
+				            </div>
+				        </div>
+				    <!-- /# card -->
+				</div>
+				<div class="chatBox" ref="chatBox" hidden="true">
+				    <div class="chatBox-head">
+				        <div class="chatBox-head-two">
+				            <div class="chat-return">返回</div>
+				            <div class="chat-people">
+				                <div class="ChatInfoHead">
+				                    <img src="img/1.png" alt="头像"/>
+				                </div>
+				                <div class="ChatInfoName">这是用户的名字，看看名字到底能有多长</div>
+				            </div>
+				            <div class="chat-close">关闭</div>
+				        </div>
+				    </div>
+				    <div class="chatBox-info">
+				        <div class="chatBox-kuang" ref="chatBoxkuang">
+				            <div class="chatBox-content">
+				                <div class="chatBox-content-demo" id="chatBox-content-demo">
+				
+				                    <div class="clearfloat">
+				                        <div class="author-name">
+				                            <small class="chat-date">2017-12-02 14:26:58</small>
+				                        </div>
+				                        <div class="left">
+				                            <div class="chat-avatars"><img src="img/icon01.png" alt="头像"/></div>
+				                            <div class="chat-message">
+				                                给你看张图
+				                            </div>
+				                        </div>
+				                    </div>
+				
+				                    <div class="clearfloat">
+				                        <div class="author-name">
+				                            <small class="chat-date">2017-12-02 14:26:58</small>
+				                        </div>
+				                        <div class="left">
+				                            <div class="chat-avatars"><img src="img/icon01.png" alt="头像"/></div>
+				                            <div class="chat-message">
+				                                <img src="img/1.png" alt="">
+				                            </div>
+				                        </div>
+				                    </div>
+				
+				                    <div class="clearfloat">
+				                        <div class="author-name">
+				                            <small class="chat-date">2017-12-02 14:26:58</small>
+				                        </div>
+				                        <div class="right">
+				                            <div class="chat-message">嗯，适合做壁纸</div>
+				                            <div class="chat-avatars"><img src="img/icon02.png" alt="头像"/></div>
+				                        </div>
+				                    </div>
+				
+				                </div>
+				            </div>
+				            <div class="chatBox-send">
+				                <div class="div-textarea" contenteditable="true"></div>
+				                <div>
+				                    <button id="chat-biaoqing" class="btn-default-styles">
+				                        <i class="iconfont icon-biaoqing"></i>
+				                    </button>
+				                    <label id="chat-tuxiang" title="发送图片" for="inputImage" class="btn-default-styles">
+				                        <input type="file" onchange="selectImg(this)" accept="image/jpg,image/jpeg,image/png"
+				                               name="file" id="inputImage" class="hidden">
+				                        <i class="iconfont icon-tuxiang"></i>
+				                    </label>
+				                    <button id="chat-fasong" class="btn-default-styles"><i class="iconfont icon-fasong"></i>
+				                    </button>
+				                </div>
+				                <div class="biaoqing-photo">
+				                    <ul>
+				                        <li><span class="emoji-picker-image" style="background-position: -9px -18px;"></span></li>
+				                        <li><span class="emoji-picker-image" style="background-position: -40px -18px;"></span></li>
+				                        <li><span class="emoji-picker-image" style="background-position: -71px -18px;"></span></li>
+				                        <li><span class="emoji-picker-image" style="background-position: -102px -18px;"></span></li>
+				                        <li><span class="emoji-picker-image" style="background-position: -133px -18px;"></span></li>
+				                        <li><span class="emoji-picker-image" style="background-position: -164px -18px;"></span></li>
+				                        <li><span class="emoji-picker-image" style="background-position: -9px -52px;"></span></li>
+				                        <li><span class="emoji-picker-image" style="background-position: -40px -52px;"></span></li>
+				                        <li><span class="emoji-picker-image" style="background-position: -71px -52px;"></span></li>
+				                        <li><span class="emoji-picker-image" style="background-position: -102px -52px;"></span></li>
+				                        <li><span class="emoji-picker-image" style="background-position: -133px -52px;"></span></li>
+				                        <li><span class="emoji-picker-image" style="background-position: -164px -52px;"></span></li>
+				                        <li><span class="emoji-picker-image" style="background-position: -9px -86px;"></span></li>
+				                        <li><span class="emoji-picker-image" style="background-position: -40px -86px;"></span></li>
+				                        <li><span class="emoji-picker-image" style="background-position: -71px -86px;"></span></li>
+				                        <li><span class="emoji-picker-image" style="background-position: -102px -86px;"></span></li>
+				                        <li><span class="emoji-picker-image" style="background-position: -133px -86px;"></span></li>
+				                        <li><span class="emoji-picker-image" style="background-position: -164px -86px;"></span></li>
+				                        <li><span class="emoji-picker-image" style="background-position: -9px -120px;"></span></li>
+				                        <li><span class="emoji-picker-image" style="background-position: -40px -120px;"></span></li>
+				                        <li><span class="emoji-picker-image" style="background-position: -71px -120px;"></span></li>
+				                        <li><span class="emoji-picker-image" style="background-position: -102px -120px;"></span>
+				                        </li>
+				                        <li><span class="emoji-picker-image" style="background-position: -133px -120px;"></span>
+				                        </li>
+				                        <li><span class="emoji-picker-image" style="background-position: -164px -120px;"></span>
+				                        </li>
+				                        <li><span class="emoji-picker-image" style="background-position: -9px -154px;"></span></li>
+				                        <li><span class="emoji-picker-image" style="background-position: -40px -154px;"></span></li>
+				                        <li><span class="emoji-picker-image" style="background-position: -71px -154px;"></span></li>
+				                        <li><span class="emoji-picker-image" style="background-position: -102px -154px;"></span>
+				                        </li>
+				                        <li><span class="emoji-picker-image" style="background-position: -133px -154px;"></span>
+				                        </li>
+				                        <li><span class="emoji-picker-image" style="background-position: -164px -154px;"></span>
+				                        </li>
+				                    </ul>
+				                </div>
+				            </div>
+				        </div>
+				    </div>
+				</div>
+     <!-- /# main content -->
+	 <p>Copyright &copy; 2019.Company name All rights reserved.</p>
+            </div><!-- /# container-fluid -->
+        </div><!-- /# main -->
+    </div><!-- /# content wrap -->
+	</div>
+	</div>
+
+
+
+
+
+
+
+    <script src="assets/js/lib/jquery.min.js"></script><!-- jquery vendor -->
+    <script src="assets/js/lib/jquery.nanoscroller.min.js"></script><!-- nano scroller -->
+    <script src="assets/js/lib/sidebar.js"></script><!-- sidebar -->
+    <script src="assets/js/lib/bootstrap.min.js"></script><!-- bootstrap -->
+    <script src="assets/js/lib/mmc-common.js"></script>
+    <script src="assets/js/lib/mmc-chat.js"></script>
+    <script src="assets/js/scripts.js"></script><!-- scripit init-->
+	<script type="text/javascript">
+	    seajs.use('./main', function (main) {
+	        main.init();
+	        main.register();
+	    });
+	</script>
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script>
+
+    screenFuc();
+    function screenFuc() {
+        var topHeight = $(".chatBox-head").innerHeight();//聊天头部高度
+        //屏幕小于768px时候,布局change
+        var winWidth = $(window).innerWidth();
+        if (winWidth <= 768) {
+            var totalHeight = $(window).height(); //页面整体高度
+            $(".chatBox-info").css("height", totalHeight - topHeight);
+            var infoHeight = $(".chatBox-info").innerHeight();//聊天头部以下高度
+            //中间内容高度
+            $(".chatBox-content").css("height", infoHeight - 46);
+            $(".chatBox-content-demo").css("height", infoHeight - 46);
+
+            $(".chatBox-list").css("height", totalHeight - topHeight);
+            $(".chatBox-kuang").css("height", totalHeight - topHeight);
+            $(".div-textarea").css("width", winWidth - 106);
+        } else {
+            $(".chatBox-info").css("height", 495);
+            $(".chatBox-content").css("height", 448);
+            $(".chatBox-content-demo").css("height", 448);
+            $(".chatBox-list").css("height", 495);
+            $(".chatBox-kuang").css("height", 495);
+            $(".div-textarea").css("width", 260);
+        }
+    }
+    (window.onresize = function () {
+        screenFuc();
+    })();
+    //未读信息数量为空时
+    var totalNum = $(".chat-message-num").html();
+    if (totalNum == "") {
+        $(".chat-message-num").css("padding", 0);
+    }
+    $(".message-num").each(function () {
+        var wdNum = $(this).html();
+        if (wdNum == "") {
+            $(this).css("padding", 0);
+        }
+    });
+
+
+    $("dr").click(function () {
+		var n = $(this).index();
+        $("collapse2").show();
+		});
+
+    //打开/关闭聊天框
+    $(".badge").click(function () {
+        $(".chatBox").toggle(0);
+		    var n = $(this).index();
+		    $(".chatBox-head-one").show();
+		    $(".chatBox-head-two").show();
+		    $(".chatBox-list").show();
+		    $(".chatBox-kuang").show();
+		
+		    //传名字
+		    $(".ChatInfoName").text($(this).children(".chat-name").children("p").eq(0).html());
+		
+		    //传头像
+		    $(".ChatInfoHead>img").attr("src", $(this).children().eq(0).children("img").attr("src"));
+		
+		    聊天框默认最底部
+		    $(document).ready(function () {
+		        $("#chatBox-content-demo").scrollTop($("#chatBox-content-demo")[0].scrollHeight);
+		    });
+		})
+    // //进聊天页面
+    // $(".chat-list-people").each(function () {
+    //     $(this).click(function () {
+    //         var n = $(this).index();
+    //         $(".chatBox-head-one").toggle();
+    //         $(".chatBox-head-two").toggle();
+    //         $(".chatBox-list").fadeToggle();
+    //         $(".chatBox-kuang").fadeToggle();
+
+    //         //传名字
+    //         $(".ChatInfoName").text($(this).children(".chat-name").children("p").eq(0).html());
+
+    //         //传头像
+    //         $(".ChatInfoHead>img").attr("src", $(this).children().eq(0).children("img").attr("src"));
+
+    //         //聊天框默认最底部
+    //         $(document).ready(function () {
+    //             $("#chatBox-content-demo").scrollTop($("#chatBox-content-demo")[0].scrollHeight);
+    //         });
+    //     })
+    // });
+
+    //返回列表
+    $(".chat-return").click(function () {
+        $(".chatBox-head-one").toggle(1);
+        $(".chatBox-head-two").toggle(1);
+        $(".chatBox-list").fadeToggle(1);
+        $(".chatBox-kuang").fadeToggle(1);
+    });
+
+    //      发送信息
+    $("#chat-fasong").click(function () {
+        var textContent = $(".div-textarea").html().replace(/[\n\r]/g, '<br>')
+        if (textContent != "") {
+            $(".chatBox-content-demo").append("<div class=\"clearfloat\">" +
+                "<div class=\"author-name\"><small class=\"chat-date\">2017-12-02 14:26:58</small> </div> " +
+                "<div class=\"right\"> <div class=\"chat-message\"> " + textContent + " </div> " +
+                "<div class=\"chat-avatars\"><img src=\"img/icon01.png\" alt=\"头像\" /></div> </div> </div>");
+            //发送后清空输入框
+            $(".div-textarea").html("");
+            聊天框默认最底部
+            $(document).ready(function () {
+                $("#chatBox-content-demo").scrollTop($("#chatBox-content-demo")[0].scrollHeight);
+            });
+        }
+    });
+
+    //      发送表情
+    $("#chat-biaoqing").click(function () {
+        $(".biaoqing-photo").toggle();
+    });
+    $(document).click(function () {
+        $(".biaoqing-photo").css("display", "none");
+    });
+    $("#chat-biaoqing").click(function (event) {
+        event.stopPropagation();//阻止事件
+    });
+
+    $(".emoji-picker-image").each(function () {
+        $(this).click(function () {
+            var bq = $(this).parent().html();
+            console.log(bq)
+            $(".chatBox-content-demo").append("<div class=\"clearfloat\">" +
+                "<div class=\"author-name\"><small class=\"chat-date\">2017-12-02 14:26:58</small> </div> " +
+                "<div class=\"right\"> <div class=\"chat-message\"> " + bq + " </div> " +
+                "<div class=\"chat-avatars\"><img src=\"img/icon01.png\" alt=\"头像\" /></div> </div> </div>");
+            //发送后关闭表情框
+            $(".biaoqing-photo").toggle();
+            聊天框默认最底部
+            $(document).ready(function () {
+                $("#chatBox-content-demo").scrollTop($("#chatBox-content-demo")[0].scrollHeight);
+            });
+        })
+    });
+
+    //      发送图片
+    function selectImg(pic) {
+        if (!pic.files || !pic.files[0]) {
+            return;
+        }
+        var reader = new FileReader();
+        reader.onload = function (evt) {
+            var images = evt.target.result;
+            $(".chatBox-content-demo").append("<div class=\"clearfloat\">" +
+                "<div class=\"author-name\"><small class=\"chat-date\">2017-12-02 14:26:58</small> </div> " +
+                "<div class=\"right\"> <div class=\"chat-message\"><img src=" + images + "></div> " +
+                "<div class=\"chat-avatars\"><img src=\"img/icon01.png\" alt=\"头像\" /></div> </div> </div>");
+            聊天框默认最底部
+            $(document).ready(function () {
+                $("#chatBox-content-demo").scrollTop($("#chatBox-content-demo")[0].scrollHeight);
+            });
+        };
+        reader.readAsDataURL(pic.files[0]);
+
+    }
+
+
+</script>
+<!-- <script type="text/javascript">
+    $(document).ready(function () {
+        var menuYloc = $(".chatBox").offset().top; //此ID为随着屏幕滚动div的ID
+        $(window).scroll(function () {
+            var offsetTop = menuYloc + $(window).scrollTop() + "px";
+            $(".chatBox").animate({ top: offsetTop }, { duration: 1000, queue: false }); //此ID为随着屏幕滚动div的ID
+        });
+    });
+</script> -->
+
+<script>
+	d.prototype.show = function() {
+		if (!this.transitioning && !this.$element.hasClass("in")) {
+			var b, e = this.$parent && this.$parent.children(".panel").children(".in, .collapsing");
+			if (!(e && e.length && (b = e.data("bs.collapse"), b && b.transitioning))) {
+				var f = a.Event("show.bs.collapse");
+				if (this.$element.trigger(f), !f.isDefaultPrevented()) {
+					e && e.length && (c.call(e, "hide"), b || e.data("bs.collapse", null));
+					var g = this.dimension();
+					this.$element.removeClass("collapse").addClass("collapsing")[g](0).attr("aria-expanded", !0), this.$trigger.removeClass(
+						"collapsed").attr("aria-expanded", !0), this.transitioning = 1;
+					var h = function() {
+						this.$element.removeClass("collapsing").addClass("collapse in")[g](""), this.transitioning = 0, this.$element.trigger(
+							"shown.bs.collapse")
+					};
+					if (!a.support.transition) return h.call(this);
+					var i = a.camelCase(["scroll", g].join("-"));
+					this.$element.one("bsTransitionEnd", a.proxy(h, this)).emulateTransitionEnd(d.TRANSITION_DURATION)[g](this.$element[
+						0][i])
+				}
+			}
+		}
+	}</script>    
+
+
+</body>
+
+</html>

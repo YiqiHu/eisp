@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<p>首页</p>
+		<h3>注册</h3>
+		<form action="/register" method="post">
+			<label>姓名：</label><input type="text" name="customer_name" /><br>
+			<label>电话：</label><input type="text" name="mobile" /><br>
+			<!-- 快递员不用填 -->
+			<label>区域：</label><input type="text" name="District" /><br>
+			<label>详细地址：</label><input type="text" name="addresses" /><br>
+			
+			<label>密码：</label><input type="password" name="password" /><br />
+			<label>角色：</label>
+			<select name="role">
+				<option value="customer">用户</option>
+				<option value="boss">老板</option>
+				<option value="expressMan">快递员</option>
+				<!-- 中途转运员不归任何老板，有隶属公司 -->
+				<option value="way">中途转运</option>
+			</select><br />
+			<!-- 快递员填，其他人不显示 -->
+			<label>老板电话：</label><input type="text" name="bossPhoNum" /><br />
+			<!-- 老板来填，其他人不显示 -->
+			<label>所属公司：</label>
+			<select name="company">
+				<option value="圆通快递">圆通快递</option>
+				<option value="中通快递">中通快递</option>
+				<option value="申通快递">申通快递</option>
+				<option value="百世汇通">百世汇通</option>
+				<option value="韵达快递">韵达快递</option>
+			</select><br />
+			<input type="submit" value="Submit"><br>
+		</form>
+
+		<input type="button" name="" claid="" value="" />
+		<h3>登录</h3>
+		<form action="/login" method="post">
+			phoneNum:<input type="text" name="phoneNum" /><br />
+			password:<input type="password" name="password" /><br />
+			<input type="submit" value="Submit"><br>
+			<a href="/logout">注销</a>
+		</form>
+		<a href="http://localhost:8080/login.html">登录跳转</a>
+		<a href="http://localhost:8080/sign.html">注册跳转</a>
+	</body>
+</html>

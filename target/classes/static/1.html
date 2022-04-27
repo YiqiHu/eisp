@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>用户后台系统</title>
+
+		<!-- ================= Favicon ================== -->
+		<!-- Standard -->
+		<link rel="shortcut icon" href="http://placehold.it/64.png/000/fff">
+		<!-- Retina iPad Touch Icon-->
+		<link rel="apple-touch-icon" sizes="144x144" href="http://placehold.it/144.png/000/fff">
+		<!-- Retina iPhone Touch Icon-->
+		<link rel="apple-touch-icon" sizes="114x114" href="http://placehold.it/114.png/000/fff">
+		<!-- Standard iPad Touch Icon-->
+		<link rel="apple-touch-icon" sizes="72x72" href="http://placehold.it/72.png/000/fff">
+		<!-- Standard iPhone Touch Icon-->
+		<link rel="apple-touch-icon" sizes="57x57" href="http://placehold.it/57.png/000/fff">
+
+		<!-- Styles -->
+		<link href="static/assets/fontAwesome/css/fontawesome-all.min.css" rel="stylesheet">
+		<link href="static/assets/css/lib/themify-icons.css" rel="stylesheet">
+		<link href="static/assets/css/lib/mmc-chat.css" rel="stylesheet" />
+		<link href="static/assets/css/lib/sidebar.css" rel="stylesheet">
+		<link href="static/assets/css/lib/bootstrap.min.css" rel="stylesheet">
+		<link href="static/assets/css/lib/nixon.css" rel="stylesheet">
+		<link href="static/assets/css/style.css" rel="stylesheet">
+		<link href="static/assets/starComment-master/dist/css/starComment.css" rel="stylesheet">
+		<script src="static/assets/starComment-master/dist/vendor/jquery/jquery.min.js"></script>
+		<script src="static/assets/starComment-master/dist/vendor/seajs/sea.js"></script>
+		<script src="static/assets/starComment-master/dist/js/starComment.js"></script>
+
+		<script src="static/js/main/stomp.min.js"></script>
+		<script src="static/js/main/sockjs.min.js"></script>
+		<script src="static/js/main/jquery.min.js"></script>
+		<script src="static/js/main/Order.js"></script>
+	
+	</head>
+
+	<body>
+
+		<div class="sidebar sidebar-shrink">
+			<img id="sideImg" src="static/logo/logo.png" />
+		</div><!-- /# sidebar -->
+
+		<div class="header">
+			<div class="pull-left">
+				<div class="logo">
+					<a href="index.html">
+						<img id="logoImg" src="static/logo/logo.png" data-logo_big="logo/logo.png" data-logo_small="logo/logoSmall.png"
+						 alt="Nixon" />
+					</a>
+				</div>
+				<div class="hamburger sidebar-toggle">
+					<span class="ti-menu"></span>
+				</div>
+			</div>
+
+			<div class="pull-right p-r-15">
+				<ul>
+					<li class="header-icon dib"><i class="ti-bell"></i>
+						<div class="drop-down">
+							<div class="dropdown-content-heading">
+								<span class="text-left">Recent Notifications</span>
+							</div>
+							<div class="dropdown-content-body">
+								<ul>
+									<li>
+										<a href="#">
+											<img class="pull-left m-r-10 avatar-img" src="static/assets/images/avatar/3.jpg" alt="" />
+											<div class="notification-content">
+												<small class="notification-timestamp pull-right">02:34 PM</small>
+												<div class="notification-heading">Mr. Jane</div>
+												<div class="notification-text">5 members joined today </div>
+											</div>
+										</a>
+									</li>
+
+									<li>
+										<a href="#">
+											<img class="pull-left m-r-10 avatar-img" src="static/assets/images/avatar/3.jpg" alt="" />
+											<div class="notification-content">
+												<small class="notification-timestamp pull-right">02:34 PM</small>
+												<div class="notification-heading">Mariam</div>
+												<div class="notification-text">likes a photo of you</div>
+											</div>
+										</a>
+									</li>
+
+									<li>
+										<a href="#">
+											<img class="pull-left m-r-10 avatar-img" src="static/assets/images/avatar/3.jpg" alt="" />
+											<div class="notification-content">
+												<small class="notification-timestamp pull-right">02:34 PM</small>
+												<div class="notification-heading">Tasnim</div>
+												<div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+											</div>
+										</a>
+									</li>
+
+									<li>
+										<a href="#">
+											<img class="pull-left m-r-10 avatar-img" src="static/assets/images/avatar/3.jpg" alt="" />
+											<div class="notification-content">
+												<small class="notification-timestamp pull-right">02:34 PM</small>
+												<div class="notification-heading">Jane Roe</div>
+												<div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+											</div>
+										</a>
+									</li>
+									<li class="text-center">
+										<a href="#" class="more-link">See All</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="header-icon dib"><i class="ti-email"></i>
+						<div class="drop-down">
+							<div class="dropdown-content-heading">
+								<span class="text-left">2 New Messages</span>
+								<a href="app-email.html"><i class="ti-pencil-alt pull-right"></i></a>
+							</div>
+							<div class="dropdown-content-body">
+								<ul>
+									<li class="notification-unread">
+										<a href="#">
+											<img class="pull-left m-r-10 avatar-img" src="static/assets/images/avatar/1.jpg" alt="" />
+											<div class="notification-content">
+												<small class="notification-timestamp pull-right">02:34 PM</small>
+												<div class="notification-heading">Jane Doe</div>
+												<div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+											</div>
+										</a>
+									</li>
+
+									<li class="notification-unread">
+										<a href="#">
+											<img class="pull-left m-r-10 avatar-img" src="static/assets/images/avatar/2.jpg" alt="" />
+											<div class="notification-content">
+												<small class="notification-timestamp pull-right">02:34 PM</small>
+												<div class="notification-heading">Jane Roe</div>
+												<div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+											</div>
+										</a>
+									</li>
+
+									<li>
+										<a href="#">
+											<img class="pull-left m-r-10 avatar-img" src="static/assets/images/avatar/3.jpg" alt="" />
+											<div class="notification-content">
+												<small class="notification-timestamp pull-right">02:34 PM</small>
+												<div class="notification-heading">Jane Doe</div>
+												<div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+											</div>
+										</a>
+									</li>
+
+									<li>
+										<a href="#">
+											<img class="pull-left m-r-10 avatar-img" src="static/assets/images/avatar/2.jpg" alt="" />
+											<div class="notification-content">
+												<small class="notification-timestamp pull-right">02:34 PM</small>
+												<div class="notification-heading">Jane Roe</div>
+												<div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+											</div>
+										</a>
+									</li>
+									<li class="text-center">
+										<a href="#" class="more-link">See All</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="header-icon dib chat-sidebar-icon"><i class="ti-comments"></i></li>
+					<li class="header-icon dib"><img class="avatar-img" src="static/assets/images/avatar/1.jpg" alt="" /> <span class="user-avatar">Jane
+							<i class="ti-angle-down f-s-10"></i></span>
+						<div class="drop-down dropdown-profile">
+							<div class="dropdown-content-heading">
+								<span class="text-left">Upgrade Now</span>
+								<p class="trial-day">30 Days Trail</p>
+							</div>
+							<div class="dropdown-content-body">
+								<ul>
+									<li><a href="#"><i class="ti-user"></i> <span>Profile</span></a></li>
+									<li><a href="#"><i class="ti-wallet"></i> <span>My Balance</span></a></li>
+									<li><a href="#"><i class="ti-write"></i> <span>My Task</span></a></li>
+									<li><a href="#"><i class="ti-calendar"></i> <span>My Calender</span></a></li>
+									<li><a href="#"><i class="ti-email"></i> <span>Inbox</span></a></li>
+									<li><a href="#"><i class="ti-settings"></i> <span>Setting</span></a></li>
+									<li><a href="#"><i class="ti-help-alt"></i> <span>Help</span></a></li>
+									<li><a href="#"><i class="ti-lock"></i> <span>Lock Screen</span></a></li>
+									<li><a href="#"><i class="ti-power-off"></i> <span>Logout</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+
+		<div class="content-wrap">
+			<div class="main">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-lg-8 p-0">
+							<div class="page-header">
+								<div class="page-title">
+									<h1>欢迎您，用户！</h1>
+								</div>
+							</div>
+						</div><!-- /# column -->
+						<div class="col-lg-4 p-0">
+							<div class="page-header">
+
+							</div>
+						</div><!-- /# column -->
+					</div><!-- /# row -->
+					<div class="col-lg-12">
+						<div class="card alert">
+							<div class="card-header">
+								<h3>功能选项</h3>
+							</div>
+							<div class="card-body">
+								<div class="panel-group" id="accordion">
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse1">个人信息</a></h4>
+										</div>
+										<div id="collapse1" class="panel-collapse collapse in">
+											<div class="panel-body">
+												<div style="margin:30px">
+													<form action="#">
+														<div class="form-group">
+															<label>姓名</label><br>
+															<input type="text" name="employeeName" id="employeeName" lay-verify="required" class="layui-input"
+															 readonly>
+														</div>
+														<div class="form-group">
+															<label>电话</label><br>
+															<input type="text" name="employeePhonenumber" id="employeePhonenumber" readonly>
+														</div>
+														<div class="form-group">
+															<label>公司</label><br>
+															<input type="text" name="employeeCompany" id="employeeCompany" readonly>
+														</div>
+														<div class="form-group">
+															<label>负责区域</label><br>
+															<input type="text" name="employeeRegion" id="employeeRegion" readonly>
+														</div>
+														<button type="imput" class="btn btn-primary btn-flat m-b-30 m-t-30" onclick="test1()">修改密码</button>
+													</form>
+												</div>
+											</div>
+										</div>
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse2">我的地址簿</a></h4>
+											</div>
+											<div id="collapse2" class="panel-collapse collapse">
+												<div class="panel-body">
+													<div class="row">
+														<div class="col-lg-12">
+															<div class="card alert">
+																<div class="card-header">
+																	<h4>我的地址簿</h4>
+																	<div class="card-header-right-icon">
+																		<ul>
+																			<li class="card-close" data-dismiss="alert"><i class="ti-close"></i></li>
+																			<li class="card-option drop-menu"><i class="ti-settings" data-toggle="dropdown" aria-haspopup="true"
+																				 aria-expanded="true" role="link"></i>
+																				<ul class="card-option-dropdown dropdown-menu">
+																					<li><a href="#"><i class="ti-loop"></i> Update data</a></li>
+																					<li><a href="#"><i class="ti-menu-alt"></i> Detail log</a></li>
+																					<li><a href="#"><i class="ti-pulse"></i> Statistics</a></li>
+																					<li><a href="#"><i class="ti-power-off"></i> Clear ist</a></li>
+																				</ul>
+																			</li>
+
+																		</ul>
+																	</div>
+																</div>
+																<div class="card-body">
+																	<table class="table table-responsive table-striped">
+																		<thead>
+																			<tr>
+																				<th>#</th>
+																				<th>姓名</th>
+																				<th>电话</th>
+																				<th>区域</th>
+																				<th>详细地址</th>
+																			</tr>
+																		</thead>
+																		<tbody>
+																			<tr>
+																				<th scope="row">1</th>
+																				<td>小刘</td>
+																				<td>13081862345</td>
+																				<td class="color-primary">河北省秦皇岛市海港区</td>
+																				<td>blablabla</td>
+																			</tr>
+																			<tr>
+																				<th scope="row">2</th>
+																				<td>小陈</td>
+																				<td>13081863456</td>
+																				<td class="color-success">河北省秦皇岛市北戴河区</td>
+																				<td>blablabla</td>
+																			</tr>
+																			<tr>
+																				<th scope="row">3</th>
+																				<td>小王</td>
+																				<td>13081864567</td>
+																				<td class="color-danger">河北省秦皇岛市山海关区</td>
+																				<td>blablabla</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</div>
+															</div>
+														</div><!-- /# column -->
+													</div><!-- /# row -->
+												</div>
+											</div>
+											<div class="panel panel-default">
+												<div class="panel-heading">
+													<h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse3">我要寄件</a></h4>
+												</div>
+												<div id="collapse3" class="panel-collapse collapse">
+													<div class="panel-body">
+														<div style="margin:30px">
+															<button class="btn btn-primary btn-rounded m-b-10 m-l-5" type="button" onclick="getAddresses()">从地址簿中导入</button><br />
+
+
+															<label>寄件人姓名：</label><input type="text" id="sendName" /><br>
+															<label>寄件人电话：</label><input type="text" id="sendPhoneNum" /><br>
+															<label>寄件区域：</label><input type="text" id="sendDistrict" /><br>
+															<label>寄件地址：</label><input type="text" id="sendAddress" /><br>
+															<button class="btn btn-default btn-rounded m-b-10" type="button" id="SendAddTo" onclick="addTo(0)"><i
+																 class="ti-plus">&nbsp;</i>添加到地址簿</button>
+															<hr />
+															<label>收件人姓名：</label><input type="text" id="receiveName" /><br>
+															<label>收件人电话：</label><input type="text" id="receivePhoneNum" /><br>
+															<label>收件区域：</label><input type="text" id="receiveDistrict" /><br>
+															<label>收件地址：</label><input type="text" id="receiveAddress" /><br>
+															<button class="btn btn-default btn-rounded m-b-10" type="button" id="SendAddTo2" onclick="addTo(0)"><i
+																 class="ti-plus">&nbsp;</i>添加到地址簿</button>
+															<hr />
+															<div class="card-toggle-body">
+																<div class="btn-group">
+																	<button type="button" class="btn btn-primary " id="query"
+																	 onclick="queryExpreMan()">
+																		查询附近快递员
+																	</button>
+																	<select id="douxing" hidden="true">
+																		<option value ="">lisi</option>
+																		
+																		<option value ="1">zhangsan</option>
+																	</select>
+																	<!-- <button type="button" class="btn btn-primary dropdown-toggle" id="douxing" data-toggle="dropdown"> 
+																	<span class="caret"></span>
+																	
+																	</button> -->
+																	
+																</div>
+															</div>
+
+															<br>
+															<button class="btn btn-primary btn-rounded m-b-10 m-l-5" type="button" id="submit" onclick="send()">提交</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="panel-heading">
+												<h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse4">已寄出的</a></h4>
+											</div>
+											<div id="collapse4" class="panel-collapse collapse">
+												<div class="panel-body">
+													<div class="row">
+														<div class="col-lg-12">
+															<div class="card alert">
+																<div class="card-header">
+																	<h4>已寄出的</h4>
+																	<div class="card-header-right-icon">
+																		<ul>
+																			<li class="card-close" data-dismiss="alert"><i class="ti-close"></i></li>
+																			<li class="card-option drop-menu"><i class="ti-settings" data-toggle="dropdown" aria-haspopup="true"
+																				 aria-expanded="true" role="link"></i>
+																				<ul class="card-option-dropdown dropdown-menu">
+																					<li><a href="#"><i class="ti-loop"></i> Update data</a></li>
+																					<li><a href="#"><i class="ti-menu-alt"></i> Detail log</a></li>
+																					<li><a href="#"><i class="ti-pulse"></i> Statistics</a></li>
+																					<li><a href="#"><i class="ti-power-off"></i> Clear ist</a></li>
+																				</ul>
+																			</li>
+
+																		</ul>
+																	</div>
+																</div>
+																<hr />
+																<div class="input-group input-group-default">
+																	<span class="input-group-btn"><button class="btn btn-primary" type="submit"><i class="ti-search"></i></button></span>
+																	<input type="text" placeholder="请输入订单号进行搜索..." name="Search" class="form-control">
+																</div>
+																<div class="card-body">
+																	<table class="table table-responsive table-striped">
+																		<thead>
+																			<tr>
+																				<th>#</th>
+																				<th>快递员姓名</th>
+																				<th>交谈</th>
+																				<th>快递员电话</th>
+																				<th>寄件地址</th>
+																				<th>收件地址</th>
+																				<th>订单编号</th>
+																				<th>价格</th>
+																			</tr>
+																		</thead>
+																		<tbody>
+																			<tr>
+																				<th scope="row">1</th>
+																				<td>小刘</td>
+																				<td><button type="button" class="badge badge-primary">联系TA</button></td>
+																				<td class="color-primary">13081862345</td>
+																				<td>河北省秦皇岛市海港区</td>
+																				<td>北京市东城区</td>
+																				<td>1308186234567890</td>
+																				<td>12</td>
+																			</tr>
+																			<tr>
+																				<th scope="row">2</th>
+																				<td>小陈</td>
+																				<td><button type="button" class="badge badge-success">联系TA</button></td>
+																				<td class="color-success">13081863456</td>
+																				<td>河北省秦皇岛市北戴河区</td>
+																				<td>天津市滨海新区</td>
+																				<td>1308186345678901</td>
+																				<td>10</td>
+																			</tr>
+																			<tr>
+																				<th scope="row">3</th>
+																				<td>小王</td>
+																				<td><button type="button" class="badge badge-danger">联系TA</button></td>
+																				<td class="color-danger">13081864567</td>
+																				<td>河北省秦皇岛市山海关区</td>
+																				<td>上海市浦东新区</td>
+																				<td>1308186456789012</td>
+																				<td>20</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</div>
+															</div>
+														</div><!-- /# column -->
+													</div><!-- /# row -->
+												</div>
+											</div>
+											<div class="panel panel-default">
+												<div class="panel-heading">
+													<h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse5">待收件管理</a></h4>
+												</div>
+												<div id="collapse5" class="panel-collapse collapse">
+													<div class="panel-body">
+														<div class="row">
+															<div class="col-lg-12">
+																<div class="card alert">
+																	<div class="card-header">
+																		<h4>待收件管理</h4>
+																		<div class="card-header-right-icon">
+																			<ul>
+																				<li class="card-close" data-dismiss="alert"><i class="ti-close"></i></li>
+																				<li class="card-option drop-menu"><i class="ti-settings" data-toggle="dropdown" aria-haspopup="true"
+																					 aria-expanded="true" role="link"></i>
+																					<ul class="card-option-dropdown dropdown-menu">
+																						<li><a href="#"><i class="ti-loop"></i> Update data</a></li>
+																						<li><a href="#"><i class="ti-menu-alt"></i> Detail log</a></li>
+																						<li><a href="#"><i class="ti-pulse"></i> Statistics</a></li>
+																						<li><a href="#"><i class="ti-power-off"></i> Clear ist</a></li>
+																					</ul>
+																				</li>
+
+																			</ul>
+																		</div>
+																	</div>
+																	<hr />
+																	<div class="input-group input-group-default">
+																		<span class="input-group-btn"><button class="btn btn-primary" type="submit"><i class="ti-search"></i></button></span>
+																		<input type="text" placeholder="请输入订单号进行搜索..." name="Search" class="form-control">
+																	</div>
+																	<div class="card-body">
+																		<table class="table table-responsive table-striped">
+																			<thead>
+																				<tr>
+																					<th>#</th>
+																					<th>快递员姓名</th>
+																					<th>交谈</th>
+																					<th>快递员电话</th>
+																					<th>订单编号</th>
+																				</tr>
+																			</thead>
+																			<tbody>
+																				<tr>
+																					<th scope="row">1</th>
+																					<td>小刘</td>
+																					<td><button type="button" class="badge badge-primary">联系TA</button></td>
+																					<td class="color-primary">13081862345</td>
+																					<td>1308186234567890</td>
+																				</tr>
+																				<tr>
+																					<th scope="row">2</th>
+																					<td>小陈</td>
+																					<td><button type="button" class="badge badge-success">联系TA</button></td>
+																					<td class="color-success">13081863456</td>
+																					<td>1308186345678901</td>
+																				</tr>
+																				<tr>
+																					<th scope="row">3</th>
+																					<td>小王</td>
+																					<td><button type="button" class="badge badge-danger">联系TA</button></td>
+																					<td class="color-danger">13081864567</td>
+																					<td>1308186456789012</td>
+																				</tr>
+																			</tbody>
+																		</table>
+																	</div>
+																</div>
+															</div><!-- /# column -->
+														</div><!-- /# row -->
+													</div>
+												</div>
+											</div>
+											<div class="panel-heading">
+												<h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse6">已收件管理</a></h4>
+											</div>
+											<div id="collapse6" class="panel-collapse collapse">
+												<div class="panel-body">
+													<div class="row">
+														<div class="col-lg-12">
+															<div class="card alert">
+																<div class="card-header">
+																	<h4>已收件管理</h4>
+																	<div class="card-header-right-icon">
+																		<ul>
+																			<li class="card-close" data-dismiss="alert"><i class="ti-close"></i></li>
+																			<li class="card-option drop-menu"><i class="ti-settings" data-toggle="dropdown" aria-haspopup="true"
+																				 aria-expanded="true" role="link"></i>
+																				<ul class="card-option-dropdown dropdown-menu">
+																					<li><a href="#"><i class="ti-loop"></i> Update data</a></li>
+																					<li><a href="#"><i class="ti-menu-alt"></i> Detail log</a></li>
+																					<li><a href="#"><i class="ti-pulse"></i> Statistics</a></li>
+																					<li><a href="#"><i class="ti-power-off"></i> Clear ist</a></li>
+																				</ul>
+																			</li>
+
+																		</ul>
+																	</div>
+																</div>
+																<hr />
+																<div class="input-group input-group-default">
+																	<span class="input-group-btn"><button class="btn btn-primary" type="submit"><i class="ti-search"></i></button></span>
+																	<input type="text" placeholder="请输入订单号进行搜索..." name="Search" class="form-control">
+																</div>
+																<div class="card-body">
+																	<table  class="table table-responsive table-striped">
+																		<thead>
+																			<tr>
+																				<th>#</th>
+																				<th>快递员姓名</th>
+																				<th>交谈</th>
+																				<th>快递员电话</th>
+																				<th>订单编号</th>
+																				<th>评价快递员</th>
+																			</tr>
+																		</thead>
+																		<tbody>
+																			<tr>
+																				<th scope="row">1</th>
+																				<td>小刘</td>
+																				<td><button type="button" class="badge badge-primary">联系TA</button></td>
+																				<td class="color-primary">13081862345</td>
+																				<td>1308186234567890</td>
+																				<td>
+																					<div>
+																						
+																						<span class="pStars2">
+																							<span class="star1" v="1" k="1" t="0"></span>
+																							<span class="star2" v="2" k="2" t="0"></span>
+																							<span class="star3" v="3" k="3" t="0"></span>
+																							<span class="star4" v="4" k="4" t="0"></span>
+																							<span class="star5" v="5" k="5" t="0"></span>
+																						</span>
+																						<!-- 添加的评论，还在最后加了个js函数 -->
+																								<button type="button" id="commentOrder1" onclick="javascript:document.getElementById('comment1').hidden="false";" class="badge badge-info">评价</button>
+																								<div id="comment1" hidden="true">
+																							     <label style="font-size:14px">参考标签：&nbsp;穿戴整齐；态度和蔼；按规定收费;<!-- <input style="height: 30px;width: 200px" type="text" id="price" class="form-control input-default " placeholder="对快递员服务还满意吗？快来评价吧"> --></label>
+																								<textarea id="PingLun" class="form-control input-default " onKeyUp="keypress2()" onblur="keypress2()"style="resize:vertical;width: 300px;"  placeholder="对快递员此次服务还满意吗？快来评价吧"></textarea>
+																								 <label id="pinglun">100</label><span>/</span><label>100</label>
+																								<button class="badge badge-success" id="cuotomer_submit" onclick="CMansubmit()"><i class="ti-new-window">&nbsp;</i>提交</button>
+																					             </div>		
+																					</div>
+																					
+																				</td>
+																			</tr>
+																			<tr>
+																				<th scope="row">2</th>
+																				<td>小陈</td>
+																				<td><button type="button" class="badge badge-success">联系TA</button></td>
+																				<td class="color-success">13081863456</td>
+																				<td>1308186345678901</td>
+																				<td>
+																					<div>
+																						
+																						<span class="pStars2">
+																							<span class="star1" v="1" k="1" t="0"></span>
+																							<span class="star2" v="2" k="2" t="0"></span>
+																							<span class="star3" v="3" k="3" t="0"></span>
+																							<span class="star4" v="4" k="4" t="0"></span>
+																							<span class="star5" v="5" k="5" t="0"></span>
+																						</span>
+																						<!-- 添加的评论，还在最后加了个js函数 -->
+																								<button type="button" id="commentOrder2" onclick="showPro()" class="badge badge-info">评价</button>
+																								<div id="comment2" hidden="true">
+																							     <label style="font-size:14px">参考标签：&nbsp;穿戴整齐；态度和蔼；按规定收费;<!-- <input style="height: 30px;width: 200px" type="text" id="price" class="form-control input-default " placeholder="对快递员服务还满意吗？快来评价吧"> --></label>
+																								<textarea id="PingLun" class="form-control input-default " onKeyUp="keypress2()" onblur="keypress2()"style="resize:vertical;width: 300px;"  placeholder="对快递员此次服务还满意吗？快来评价吧"></textarea>
+																								 <label id="pinglun">100</label><span>/</span><label>100</label>
+																								<button class="badge badge-success" id="cuotomer_submit" onclick="CMansubmit()"><i class="ti-new-window">&nbsp;</i>提交</button>
+																					             </div>		
+																					</div>
+																				</td>
+																			</tr>
+																			<tr>
+																				<th scope="row">3</th>
+																				<td>小王</td>
+																				<td><button type="button" class="badge badge-danger">联系TA</button></td>
+																				<td class="color-danger">13081864567</td>
+																				<td>1308186456789012</td>
+																				<td>
+																					<div>
+																						
+																						<span class="pStars2">
+																							<span class="star1" v="1" k="1" t="0"></span>
+																							<span class="star2" v="2" k="2" t="0"></span>
+																							<span class="star3" v="3" k="3" t="0"></span>
+																							<span class="star4" v="4" k="4" t="0"></span>
+																							<span class="star5" v="5" k="5" t="0"></span>
+																						</span>
+																						<!-- 添加的评论，还在最后加了个js函数 -->
+																								<button type="button" id="commentOrder3" onclick="showPro()" class="badge badge-info">评价</button>
+																								<div id="comment3" hidden="true">
+																							     <label style="font-size:14px">参考标签：&nbsp;穿戴整齐；态度和蔼；按规定收费;</label>
+																								<textarea id="PingLun" class="form-control input-default " onKeyUp="keypress2()" onblur="keypress2()"style="resize:vertical;width: 300px;"  placeholder="对快递员此次服务还满意吗？快来评价吧"></textarea>
+																								 <label id="pinglun">100</label><span>/</span><label>100</label>
+																								<button class="badge badge-success" id="cuotomer_submit" onclick="CMansubmit()"><i class="ti-new-window">&nbsp;</i>提交</button>
+																					             </div>		
+																					</div>
+																				</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</div>
+															</div>
+														</div><!-- /# column -->
+													</div><!-- /# row -->
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- /# card -->
+							</div>
+							<!-- /# main content -->
+							<p>Copyright &copy; 2019.Company name All rights reserved.</p>
+						</div><!-- /# container-fluid -->
+					</div><!-- /# main -->
+				</div><!-- /# content wrap -->
+			</div>
+		</div>
+		
+
+
+
+
+
+		<script src="static/js/main/Order.js" type="text/javascript" charset="utf-8"></script>
+		<script src="static/assets/js/lib/jquery.min.js"></script><!-- jquery vendor -->
+		<script src="static/assets/js/lib/jquery.nanoscroller.min.js"></script><!-- nano scroller -->
+		<script src="static/assets/js/lib/sidebar.js"></script><!-- sidebar -->
+		<script src="static/assets/js/lib/bootstrap.min.js"></script><!-- bootstrap -->
+		<script src="static/assets/js/lib/mmc-common.js"></script>
+		<script src="static/assets/js/lib/mmc-chat.js"></script>
+		<script src="static/assets/js/scripts.js"></script><!-- scripit init-->
+		<script type="text/javascript">
+			function test1(){
+				$(".dropdown-content-body ul").append("<li><a href='#'><div class='notification-content'><small class='notification-timestamp pull-right'>ordermessage.order.orderTime</small><div class='notification-heading'>寄件订单</div><div class='notification-text'>ordermessage.from </div></div></a></li>");
+				
+			}
+		</script>
+<script>
+		
+				
+				document.getElementById("commentOrder2").onclick=function(){
+				document.getElementById("comment2").hidden=false;}
+				document.getElementById("commentOrder3").onclick=function(){
+				document.getElementById("comment3").hidden=false;}
+				
+				function keypress2(){
+    var text1=document.getElementById("PingLun").value;
+    var maxLen=100;
+    var len;//记录剩余字符串的长度
+    if(text1.length>=maxLen)
+    {
+        document.getElementById("PingLun").value=text1.substr(0,maxLen);//只显示起始位-末尾；substr（起始位，末尾)
+        len=0;
+    }else{
+        len=maxLen-text1.length;
+    }
+    document.getElementById("pinglun").innerText=len;
+}
+
+		</script>
+
+
+	</body>
+
+</html>

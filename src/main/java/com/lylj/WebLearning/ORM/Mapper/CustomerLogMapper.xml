@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="com.lylj.WebLearning.ORM.Mapper.customerLogMapper">
+
+	<select id="loadByPhoneNum" parameterType="java.lang.String"
+		resultType="com.lylj.WebLearning.ORM.entity.customerLog">
+		select customer_name,role,password,addresses,mobile from
+		customer_log where
+		mobile =
+		#{mobile,jdbcType=VARCHAR}
+	</select>
+
+	<select id="getEMName" parameterType="java.lang.String"
+		resultType="java.lang.String">
+		select username from
+		express_message where
+		bossname =
+		#{bossName,jdbcType=VARCHAR}
+	</select>
+	
+	<select id="getCustomer" parameterType="java.lang.String"
+		resultType="com.lylj.WebLearning.ORM.entity.customerLog">
+		select * from
+		customer_log where
+		customer_name =
+		#{name,jdbcType=VARCHAR}
+	</select>
+
+	<select id="getAddresses" parameterType="java.lang.String"
+		resultType="java.lang.String">
+		select addresses from
+		customer_log where
+		customer_name =
+		#{name,jdbcType=VARCHAR}
+	</select>
+
+	<select id="selectExpreMan" parameterType="java.lang.String"
+		resultType="com.lylj.WebLearning.ORM.entity.customerLog">
+		select customer_name,role,password,addresses,mobile from
+		customer_log where
+		addresses
+		=#{district,jdbcType=LONGVARCHAR} and
+		role="expressMan"
+	</select>
+
+	<select id="selecCompany" parameterType="java.lang.String"
+		resultType="java.lang.String">
+		select company from
+		express_message where
+		username
+		=#{name,jdbcType=VARCHAR}
+	</select>
+
+	<insert id="insert"
+		parameterType="com.lylj.WebLearning.ORM.entity.customerLog"> insert into customer_log
+		(customer_name,role,password,addresses,mobile) values (
+		#{customer_name,jdbcType=VARCHAR}, #{role,jdbcType=VARCHAR},
+		#{password,jdbcType=VARCHAR}, #{addresses,jdbcType=LONGVARCHAR},
+		#{mobile,jdbcType=VARCHAR})
+	</insert>
+
+	<insert id="insertEM"
+		parameterType="com.lylj.WebLearning.ORM.entity.ExpressMessage"> insert into express_message
+		(username,role,bossname,company) values (
+		#{username,jdbcType=VARCHAR}, #{role,jdbcType=VARCHAR},
+		#{bossname,jdbcType=VARCHAR}, #{company,jdbcType=VARCHAR})
+	</insert>
+
+	<update id="updateAddress" parameterType="java.lang.String">
+        update customer_log
+        set addresses=#{oldAddress,jdbcType=LONGVARCHAR}
+		where customer_name=#{name,jdbcType=VARCHAR}
+	</update>
+	
+	<update id="resetPass" parameterType="java.lang.String">
+        update customer_log
+        set password=#{encode,jdbcType=VARCHAR}
+		where customer_name=#{name,jdbcType=VARCHAR}
+	</update>
+
+
+</mapper>

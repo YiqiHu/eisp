@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lylj.WebLearning.ORM.Mapper.CommentMapper">
+	<insert id="creat"
+		parameterType="com.lylj.WebLearning.ORM.entity.CommentsInfor">
+		insert into comments_infor
+		(expreMan_name,comment_time,customer_name,number,comments)
+		values
+		(
+		#{expreMan_name,jdbcType=VARCHAR},
+		#{comment_time,jdbcType=VARCHAR},
+		#{customer_name,jdbcType=VARCHAR},
+		#{number,jdbcType=VARCHAR},
+		#{comments,jdbcType=VARCHAR})
+	</insert>
+	<select id="getAvgGrade" 
+		resultType="java.lang.Double"
+		parameterType="java.lang.String">
+		select avg(grade) from comments_infor
+		where expreMan_name=#{customer_name,jdbcType=VARCHAR}
+	</select>
+</mapper>

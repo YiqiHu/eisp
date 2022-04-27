@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lylj.WebLearning.ORM.Mapper.OrderMapper">
+	<resultMap id="BaseResultMap"
+		type="com.lylj.WebLearning.ORM.entity.Order">
+		<id column="id" property="ID" jdbcType="BIGINT" />
+		<result column="send_name" property="sendName"
+			jdbcType="VARCHAR" />
+		<result column="send_district" property="sendDistrict"
+			jdbcType="VARCHAR" />
+		<result column="send_address" property="sendAddress"
+			jdbcType="VARCHAR" />
+		<result column="send_phone_num" property="sendPhoneNum"
+			jdbcType="VARCHAR" />
+		<result column="receive_name" property="receiveName"
+			jdbcType="VARCHAR" />
+		<result column="receive_district" property="receiveDistrict"
+			jdbcType="VARCHAR" />
+		<result column="receive_address" property="receiveAddress"
+			jdbcType="VARCHAR" />
+		<result column="receive_phone_num" property="receivePhoneNum"
+			jdbcType="VARCHAR" />
+		<result column="express_name" property="expressName"
+			jdbcType="VARCHAR" />
+		<result column="price" property="price" jdbcType="INTEGER" />
+		<result column="order_picture" property="orderPicture"
+			jdbcType="VARCHAR" />
+		<result column="picture_location" property="pictureLocation"
+			jdbcType="VARCHAR" />
+		<result column="state" property="state" jdbcType="TINYINT" />
+		<result column="order_time" property="orderTime"
+			jdbcType="VARCHAR" />
+		<result column="solve_time" property="solveTime"
+			jdbcType="VARCHAR" />
+		<result column="number" property="number" jdbcType="VARCHAR" />
+	</resultMap>
+	<insert id="create"
+		parameterType="com.lylj.WebLearning.ORM.entity.Order">
+		insert into order_table
+		(send_name,send_district,
+		send_address,send_phone_num,
+		receive_name,receive_district,
+		receive_address,receive_phone_num,
+		express_name,order_time)
+		values
+		(
+		#{sendName,jdbcType=VARCHAR},
+		#{sendDistrict,jdbcType=VARCHAR},
+		#{sendAddress,jdbcType=VARCHAR},
+		#{sendPhoneNum,jdbcType=VARCHAR},
+		#{receiveName,jdbcType=VARCHAR},
+		#{receiveDistrict,jdbcType=VARCHAR},
+		#{receiveAddress,jdbcType=VARCHAR},
+		#{receivePhoneNum,jdbcType=VARCHAR},
+		#{expressName,jdbcType=VARCHAR},
+		#{orderTime,jdbcType=VARCHAR})
+	</insert>
+	<insert id="updateInfor"
+		parameterType="com.lylj.WebLearning.ORM.entity.OrderInfor">
+		insert into order_infor
+		(customer_name,state,number,solve_time)
+		values
+		(
+		#{customer_name,jdbcType=VARCHAR},
+		#{state,jdbcType=TINYINT},
+		#{number,jdbcType=VARCHAR},
+		#{solve_time,jdbcType=VARCHAR})
+	</insert>
+	<update id="set"
+		parameterType="com.lylj.WebLearning.ORM.entity.Order"> update order_table set
+		number=#{number,jdbcType=VARCHAR}, state=#{state,jdbcType=TINYINT},
+		price=#{price,jdbcType=INTEGER},
+		picture_location=#{pictureLocation,jdbcType=VARCHAR},
+		solve_time=#{solveTime,jdbcType=VARCHAR},
+		order_picture=#{orderPicture,jdbcType=VARCHAR} where
+		id=#{ID,jdbcType=BIGINT}
+	</update>
+
+	<select id="getID"
+		parameterType="com.lylj.WebLearning.ORM.entity.Order"
+		resultType="java.lang.Long">
+		SELECT id FROM lylj.order_table
+		where
+		express_name=#{expressName,jdbcType=VARCHAR}
+		and state=0
+		and
+		send_name=#{sendName,jdbcType=VARCHAR}
+	</select>
+
+	<select id="getEMName" parameterType="java.lang.String"
+		resultType="java.lang.String">
+		SELECT username FROM lylj.express_message
+		where
+		bossname=#{bossName,jdbcType=VARCHAR}
+	</select>
+
+	<select id="bossGetOrder" parameterType="java.lang.String"
+		resultMap="BaseResultMap"
+		resultType="com.lylj.WebLearning.ORM.entity.Order">
+		select * from order_table
+		where state!=0 and express_name in
+		(SELECT username FROM express_message
+		where bossname=#{bossName,jdbcType=VARCHAR})
+	</select>
+	<select id="expreGetOrder0" resultMap="BaseResultMap"
+		resultType="com.lylj.WebLearning.ORM.entity.Order">
+		select * from order_table
+		where
+		express_name=#{expreName,jdbcType=VARCHAR}
+		and
+		state=0
+	</select>
+	<select id="expreGetOrder1" resultMap="BaseResultMap"
+		resultType="com.lylj.WebLearning.ORM.entity.Order">
+		select * from order_table
+		where
+		express_name=#{expreName,jdbcType=VARCHAR}
+		and
+		(state=1 or state=2  or state=3 or state=4)
+	</select>
+
+	<select id="sendGetOrder" 
+		resultMap="BaseResultMap"
+		resultType="com.lylj.WebLearning.ORM.entity.Order">
+		select * from order_table
+		where
+		send_phone_num=#{send_phone_num,jdbcType=VARCHAR}
+		and
+		state=#{state,jdbcType=TINYINT}
+	</select>
+
+	<select id="getOrderByNum" parameterType="java.lang.String"
+		resultType="com.lylj.WebLearning.ORM.entity.OrderInfor">
+		select * from order_infor
+		where
+		number=#{number,jdbcType=VARCHAR}
+		order by solve_time desc
+	</select>
+	
+	<select id="getOrderByPhoneNUm" parameterType="java.lang.String"
+		resultMap="BaseResultMap"
+		resultType="com.lylj.WebLearning.ORM.entity.Order">
+		select * from order_table
+		where
+		receive_phone_num=#{phoneNum,jdbcType=VARCHAR}
+		and
+		(state=1 or state=2  or state=3)
+	</select>
+	<select id="getOrderbyTwo" 
+		resultMap="BaseResultMap"
+		resultType="com.lylj.WebLearning.ORM.entity.Order">
+		select * from order_table
+		where
+		express_name=#{expressName,jdbcType=VARCHAR}
+		and
+		send_name=#{sendName,jdbcType=VARCHAR}
+		and
+		state=0
+	</select>
+	<select id="getOrderByPhoneNUm0" parameterType="java.lang.String"
+		resultMap="BaseResultMap"
+		resultType="com.lylj.WebLearning.ORM.entity.Order">
+		select * from order_table
+		where
+		receive_phone_num=#{phoneNum,jdbcType=VARCHAR}
+		and
+		state=4
+	</select>
+	<select id="getBynum" parameterType="java.lang.String"
+		resultMap="BaseResultMap"
+		resultType="com.lylj.WebLearning.ORM.entity.Order">
+		select * from order_table
+		where
+		number=#{number,jdbcType=VARCHAR}
+	</select>
+	<!-- <select id="getCompany" parameterType="java.lang.String"
+		resultType="java.lang.String">
+		select company from express_message
+		where
+		username=#{name,jdbcType=VARCHAR}
+	</select> -->
+	
+
+</mapper>

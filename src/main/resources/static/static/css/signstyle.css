@@ -1,0 +1,87 @@
+/*全局样式*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset {
+    width: 300px;
+    padding: 20px;
+    margin: 30px;
+    border: 1px solid #ccc;
+}
+
+legend{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#addr-show, #addr-show02,#addr-show03{
+    width: 200px;
+    height: 25px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    /* width: 80px;
+    height: 30px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    outline: none;
+    background-color: #aaa;
+    margin: 0 20px; */
+	width: 60px;
+	background: #27AE60;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+}
+
+.btn:disabled{
+    background-color:#ccc;
+}
+
+/*样式部分*/
+#addr-choice{
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 5px 0;
+    margin-bottom: 10px;
+}
+
+#title-wrap li,#addr-wrap li{
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+
+#title-wrap li{
+    width:50px;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
+.titleSel{
+    border-bottom: 2px solid #23B7E5;
+}
+
+#addr-wrap li{
+    width: 70px;
+    height: 20px;
+    border-radius: 4px;
+    line-height: 20px;
+    font-size: 14px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+#addr-wrap li:hover{
+    background-color: #23B7E5;
+}
+

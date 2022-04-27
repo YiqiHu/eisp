@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.lylj.WebLearning.orderTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.115 s <<< FAILURE! - in com.lylj.WebLearning.orderTest
+test(com.lylj.WebLearning.orderTest)  Time elapsed: 0.015 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.lylj.WebLearning.orderTest.test(orderTest.java:24)
+
