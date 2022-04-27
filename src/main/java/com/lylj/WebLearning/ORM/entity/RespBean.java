@@ -1,7 +1,7 @@
 /**
  * @date 2019年10月21日
  * @time 下午4:17:05
- * @author LiangHB
+ * @author YiqiHu
  */
 package com.lylj.WebLearning.ORM.entity;
 
